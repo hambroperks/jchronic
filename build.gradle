@@ -1,0 +1,40 @@
+apply plugin: 'java'
+apply plugin: 'maven'
+
+group = 'com.rubiconproject.oss'
+version = '0.2.7-SNAPSHOT'
+
+description = """jchronic"""
+
+sourceCompatibility = 1.5
+targetCompatibility = 1.5
+tasks.withType(JavaCompile) {
+	options.encoding = 'UTF-8'
+}
+
+configurations.all {
+}
+
+repositories {
+        
+     mavenCentral()
+     maven { url "https://oss.sonatype.org/content/repositories/snapshots" }
+     maven { url "http://repo.maven.apache.org/maven2" }
+}
+dependencies {
+    compile group: 'junit', name: 'junit', version:'4.8.1'
+}
+
+task translateJava(type:Exec) {
+    inputs.files sourceSets.main.allJava
+
+    // the classpath is built from the runtime dependencies for the sourcesets ...
+    executable "${J2OBJC_HOME}/j2objc"
+    args '--doc-comments'
+    args '--nullability'
+    args '--strip-reflection'
+    args '-d', file('src/gen/objc').path
+    args '-sourcepath', (sourceSets.main.allJava.srcDirs).join(':')
+    args '-classpath', sourceSets.main.runtimeClasspath.collect { it.absolutePath }.join(':')
+    args inputs.files
+}

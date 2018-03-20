@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/jchronic.iml" filepath="$PROJECT_DIR$/jchronic.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jchronic_main.iml" filepath="$PROJECT_DIR$/.idea/modules/jchronic_main.iml" group="jchronic" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jchronic_test.iml" filepath="$PROJECT_DIR$/.idea/modules/jchronic_test.iml" group="jchronic" />
+    </modules>
+  </component>
+</project>
