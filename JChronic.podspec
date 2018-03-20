@@ -2,9 +2,9 @@ Pod::Spec.new do |s|
   s.name             = "jChronic"
   s.version          = '0.2.7-SNAPSHOT'
   s.author           = { "Marcus Smith" => "marcus@laundrapp.com" }
-  s.source           = { :git => "https://github.com/hambroperks/jchronic.git", :tag => "v1.8.1-j2objc1.2" }
-  s.summary 	       = "Java library to enable conversion to and from standard string formats. Converted to Objective-C using J2ObjC."
-  s.homepage         = "http://www.joda.org/joda-convert/"
+  s.source           = { :git => "https://github.com/hambroperks/jchronic.git", :tag => "0.2.7-SNAPSHOT-J2ObjC1.2" }
+  s.summary 	       = "A natural language date parser in Java. Originally written by Mike Schrag as a direct port of Ruby's chronic. Converted to Objective-C using J2ObjC."
+  s.homepage         = "https://github.com/samtingleff/jchronic"
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE.txt' }
 
   s.ios.deployment_target = '7.0'
