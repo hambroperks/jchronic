@@ -23,6 +23,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterYear, _currentYearStar
 
 @implementation ComMdimensionJchronicRepeatersRepeaterYear
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterYear_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   if (_currentYearStart_ == nil) {
     if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) {
@@ -79,13 +86,6 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterYear, _currentYearStar
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-year");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterYear_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_currentYearStart_);

@@ -12,49 +12,50 @@
 #include "java/lang/Enum.h"
 #include "java/lang/IllegalArgumentException.h"
 #include "java/lang/RuntimeException.h"
+#include "java/lang/Throwable.h"
 #include "java/util/HashMap.h"
 #include "java/util/Map.h"
 #include "java/util/Set.h"
 #include "java/util/regex/Matcher.h"
 #include "java/util/regex/Pattern.h"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_YEAR_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_YEAR_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_YEAR_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, YEAR_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_SEASON_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_SEASON_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_SEASON_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, SEASON_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_MONTH_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_MONTH_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_MONTH_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, MONTH_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_FORTNIGHT_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_FORTNIGHT_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_FORTNIGHT_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, FORTNIGHT_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_WEEK_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_WEEK_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_WEEK_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, WEEK_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_WEEKEND_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_WEEKEND_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_WEEKEND_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, WEEKEND_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_DAY_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_DAY_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_DAY_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, DAY_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_HOUR_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_HOUR_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_HOUR_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, HOUR_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_MINUTE_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_MINUTE_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_MINUTE_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, MINUTE_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_SECOND_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_get_SECOND_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterUnit_SECOND_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterUnit, SECOND_PATTERN, JavaUtilRegexPattern *)
 
@@ -115,7 +116,7 @@ ComMdimensionJchronicRepeatersRepeaterUnit *ComMdimensionJchronicRepeatersRepeat
       if ([((JavaUtilRegexMatcher *) nil_chk([((JavaUtilRegexPattern *) nil_chk(scannerItem)) matcherWithJavaLangCharSequence:[((ComMdimensionJchronicUtilsToken *) nil_chk(token)) getWord]])) matches]) {
         ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *unitNameEnum = [scanner getWithId:scannerItem];
         NSString *unitName = [((ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *) nil_chk(unitNameEnum)) name];
-        NSString *capitalizedUnitName = JreStrcat("$$", [((NSString *) nil_chk(unitName)) substring:0 endIndex:1], [((NSString *) nil_chk([unitName substring:1])) lowercaseString]);
+        NSString *capitalizedUnitName = JreStrcat("$$", [((NSString *) nil_chk(unitName)) java_substring:0 endIndex:1], [((NSString *) nil_chk([unitName java_substring:1])) lowercaseString]);
         NSString *repeaterClassName = JreStrcat("$$", @"com.mdimension.jchronic.repeaters.Repeater", capitalizedUnitName);
         ComMdimensionJchronicRepeatersRepeaterUnit *repeater = [((IOSClass *) nil_chk([((IOSClass *) nil_chk(IOSClass_forName_(repeaterClassName))) asSubclass:ComMdimensionJchronicRepeatersRepeaterUnit_class_()])) newInstance];
         return repeater;
@@ -123,8 +124,8 @@ ComMdimensionJchronicRepeatersRepeaterUnit *ComMdimensionJchronicRepeatersRepeat
     }
     return nil;
   }
-  @catch (NSException *t) {
-    @throw create_JavaLangRuntimeException_initWithNSString_withNSException_(@"Failed to create RepeaterUnit.", t);
+  @catch (JavaLangThrowable *t) {
+    @throw create_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_(@"Failed to create RepeaterUnit.", t);
   }
 }
 
@@ -142,10 +143,6 @@ ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeat
 
 + (ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *)valueOfWithNSString:(NSString *)name {
   return ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_valueOfWithNSString_(name);
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-  return self;
 }
 
 + (void)initialize {

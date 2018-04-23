@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicHandlersHandler
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicHandlersHandler_) && (INCLUDE_ALL_ComMdimensionJchronicHandlersHandler || defined(INCLUDE_ComMdimensionJchronicHandlersHandler))
 #define ComMdimensionJchronicHandlersHandler_
 
@@ -48,7 +53,7 @@
 /*!
  @brief Recursively finds repeaters within other repeaters.
  Returns a Span representing the innermost time span
- or nil if no repeater union could be found
+  or nil if no repeater union could be found
  */
 + (ComMdimensionJchronicUtilsSpan *)findWithinWithJavaUtilList:(id<JavaUtilList>)tags
                             withComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)span
@@ -72,6 +77,10 @@
 
 - (NSString *)description;
 
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
+
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(ComMdimensionJchronicHandlersHandler)
@@ -88,7 +97,7 @@ FOUNDATION_EXPORT ComMdimensionJchronicHandlersHandler *new_ComMdimensionJchroni
 
 FOUNDATION_EXPORT ComMdimensionJchronicHandlersHandler *create_ComMdimensionJchronicHandlersHandler_initWithComMdimensionJchronicHandlersIHandler_withBoolean_withComMdimensionJchronicHandlersHandlerPatternArray_(id<ComMdimensionJchronicHandlersIHandler> handler, jboolean compatible, IOSObjectArray *patterns);
 
-FOUNDATION_EXPORT id<JavaUtilMap> ComMdimensionJchronicHandlersHandler_definitions();
+FOUNDATION_EXPORT id<JavaUtilMap> ComMdimensionJchronicHandlersHandler_definitions(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicUtilsSpan *ComMdimensionJchronicHandlersHandler_tokensToSpanWithJavaUtilList_withComMdimensionJchronicOptions_(id<JavaUtilList> tokens, ComMdimensionJchronicOptions *options);
 
@@ -123,17 +132,13 @@ typedef NS_ENUM(NSUInteger, ComMdimensionJchronicHandlersHandler_HandlerType_Enu
   ComMdimensionJchronicHandlersHandler_HandlerType_Enum_NARROW = 4,
 };
 
-@interface ComMdimensionJchronicHandlersHandler_HandlerType : JavaLangEnum < NSCopying >
+@interface ComMdimensionJchronicHandlersHandler_HandlerType : JavaLangEnum
 
 #pragma mark Public
 
 + (ComMdimensionJchronicHandlersHandler_HandlerType *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
-
-#pragma mark Package-Private
-
-- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -142,22 +147,22 @@ J2OBJC_STATIC_INIT(ComMdimensionJchronicHandlersHandler_HandlerType)
 /*! INTERNAL ONLY - Use enum accessors declared below. */
 FOUNDATION_EXPORT ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_values_[];
 
-inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_TIME();
+inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_TIME(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicHandlersHandler_HandlerType, TIME)
 
-inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_DATE();
+inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_DATE(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicHandlersHandler_HandlerType, DATE)
 
-inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_ANCHOR();
+inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_ANCHOR(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicHandlersHandler_HandlerType, ANCHOR)
 
-inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_ARROW();
+inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_ARROW(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicHandlersHandler_HandlerType, ARROW)
 
-inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_NARROW();
+inline ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_get_NARROW(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicHandlersHandler_HandlerType, NARROW)
 
-FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicHandlersHandler_HandlerType_values();
+FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicHandlersHandler_HandlerType_values(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersHandler_HandlerType_valueOfWithNSString_(NSString *name);
 
@@ -167,4 +172,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicHandlersHandler_HandlerType)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicHandlersHandler")

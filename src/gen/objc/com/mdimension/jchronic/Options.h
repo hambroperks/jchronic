@@ -71,9 +71,9 @@ J2OBJC_EMPTY_STATIC_INIT(ComMdimensionJchronicOptions)
 
 FOUNDATION_EXPORT void ComMdimensionJchronicOptions_init(ComMdimensionJchronicOptions *self);
 
-FOUNDATION_EXPORT ComMdimensionJchronicOptions *new_ComMdimensionJchronicOptions_init() NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT ComMdimensionJchronicOptions *new_ComMdimensionJchronicOptions_init(void) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComMdimensionJchronicOptions *create_ComMdimensionJchronicOptions_init();
+FOUNDATION_EXPORT ComMdimensionJchronicOptions *create_ComMdimensionJchronicOptions_init(void);
 
 FOUNDATION_EXPORT void ComMdimensionJchronicOptions_initWithJavaUtilCalendar_(ComMdimensionJchronicOptions *self, JavaUtilCalendar *now);
 

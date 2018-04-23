@@ -43,7 +43,7 @@
 
 J2OBJC_STATIC_INIT(ComMdimensionJchronicTagsScalarYear)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarYear_get_YEAR_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarYear_get_YEAR_PATTERN(void);
 /*! INTERNAL ONLY - Use accessor function from above. */
 FOUNDATION_EXPORT JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarYear_YEAR_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsScalarYear, YEAR_PATTERN, JavaUtilRegexPattern *)

@@ -23,6 +23,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterHour, _currentDayStart
 
 @implementation ComMdimensionJchronicRepeatersRepeaterHour
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterHour_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   if (_currentDayStart_ == nil) {
     if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) {
@@ -77,13 +84,6 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterHour, _currentDayStart
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-hour");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterHour_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_currentDayStart_);

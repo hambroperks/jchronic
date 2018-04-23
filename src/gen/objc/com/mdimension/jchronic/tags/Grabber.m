@@ -20,15 +20,15 @@
 
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_get_THIS_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_get_THIS_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_THIS_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsGrabber, THIS_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_get_NEXT_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_get_NEXT_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_NEXT_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsGrabber, NEXT_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_get_LAST_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_get_LAST_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsGrabber_LAST_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsGrabber, LAST_PATTERN, JavaUtilRegexPattern *)
 
@@ -119,10 +119,6 @@ ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Rela
 
 + (ComMdimensionJchronicTagsGrabber_Relative *)valueOfWithNSString:(NSString *)name {
   return ComMdimensionJchronicTagsGrabber_Relative_valueOfWithNSString_(name);
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-  return self;
 }
 
 + (void)initialize {

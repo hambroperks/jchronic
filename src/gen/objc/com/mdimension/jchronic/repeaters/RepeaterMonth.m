@@ -21,11 +21,18 @@
 
 J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterMonth, _currentMonthStart_, JavaUtilCalendar *)
 
-inline jint ComMdimensionJchronicRepeatersRepeaterMonth_get_MONTH_SECONDS();
+inline jint ComMdimensionJchronicRepeatersRepeaterMonth_get_MONTH_SECONDS(void);
 #define ComMdimensionJchronicRepeatersRepeaterMonth_MONTH_SECONDS 2592000
 J2OBJC_STATIC_FIELD_CONSTANT(ComMdimensionJchronicRepeatersRepeaterMonth, MONTH_SECONDS, jint)
 
 @implementation ComMdimensionJchronicRepeatersRepeaterMonth
+
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterMonth_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
 
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   jint direction = (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) ? 1 : -1;
@@ -73,13 +80,6 @@ J2OBJC_STATIC_FIELD_CONSTANT(ComMdimensionJchronicRepeatersRepeaterMonth, MONTH_
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-month");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterMonth_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_currentMonthStart_);

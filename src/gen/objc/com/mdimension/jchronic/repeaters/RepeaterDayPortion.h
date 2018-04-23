@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersRepeaterDayPortion
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersRepeaterDayPortion_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterDayPortion || defined(INCLUDE_ComMdimensionJchronicRepeatersRepeaterDayPortion))
 #define ComMdimensionJchronicRepeatersRepeaterDayPortion_
 
@@ -82,17 +87,13 @@ typedef NS_ENUM(NSUInteger, ComMdimensionJchronicRepeatersRepeaterDayPortion_Day
   ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_Enum_NIGHT = 5,
 };
 
-@interface ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion : JavaLangEnum < NSCopying >
+@interface ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion : JavaLangEnum
 
 #pragma mark Public
 
 + (ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
-
-#pragma mark Package-Private
-
-- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -101,25 +102,25 @@ J2OBJC_STATIC_INIT(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion)
 /*! INTERNAL ONLY - Use enum accessors declared below. */
 FOUNDATION_EXPORT ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_values_[];
 
-inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_AM();
+inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_AM(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion, AM)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_PM();
+inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_PM(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion, PM)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_MORNING();
+inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_MORNING(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion, MORNING)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_AFTERNOON();
+inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_AFTERNOON(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion, AFTERNOON)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_EVENING();
+inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_EVENING(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion, EVENING)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_NIGHT();
+inline ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_get_NIGHT(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion, NIGHT)
 
-FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_values();
+FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_values(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_valueOfWithNSString_(NSString *name);
 
@@ -129,4 +130,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayP
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterDayPortion")

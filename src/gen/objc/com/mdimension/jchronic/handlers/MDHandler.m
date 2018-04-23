@@ -20,22 +20,22 @@
 
 @implementation ComMdimensionJchronicHandlersMDHandler
 
-- (ComMdimensionJchronicUtilsSpan *)handleWithComMdimensionJchronicRepeatersRepeater:(ComMdimensionJchronicRepeatersRepeater *)month
-                                                    withComMdimensionJchronicTagsTag:(ComMdimensionJchronicTagsTag *)day
-                                                                    withJavaUtilList:(id<JavaUtilList>)timeTokens
-                                                    withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
-  [((ComMdimensionJchronicRepeatersRepeater *) nil_chk(month)) setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([((ComMdimensionJchronicOptions *) nil_chk(options)) getNow])) clone], [JavaUtilCalendar class])];
-  ComMdimensionJchronicUtilsSpan *span = [month thisSpanWithComMdimensionJchronicTagsPointer_PointerType:[options getContext]];
-  JavaUtilCalendar *dayStart = ComMdimensionJchronicUtilsTime_constructWithInt_withInt_withInt_([((JavaUtilCalendar *) nil_chk([((ComMdimensionJchronicUtilsSpan *) nil_chk(span)) getBeginCalendar])) getWithInt:JavaUtilCalendar_YEAR], [((JavaUtilCalendar *) nil_chk([span getBeginCalendar])) getWithInt:JavaUtilCalendar_MONTH] + 1, [((JavaLangInteger *) nil_chk([((ComMdimensionJchronicTagsTag *) nil_chk(day)) getType])) intValue]);
-  return ComMdimensionJchronicHandlersHandler_dayOrTimeWithJavaUtilCalendar_withJavaUtilList_withComMdimensionJchronicOptions_(dayStart, timeTokens, options);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComMdimensionJchronicHandlersMDHandler_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (ComMdimensionJchronicUtilsSpan *)handleWithComMdimensionJchronicRepeatersRepeater:(ComMdimensionJchronicRepeatersRepeater *)month
+                                                    withComMdimensionJchronicTagsTag:(ComMdimensionJchronicTagsTag *)day
+                                                                    withJavaUtilList:(id<JavaUtilList>)timeTokens
+                                                    withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
+  [((ComMdimensionJchronicRepeatersRepeater *) nil_chk(month)) setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([((ComMdimensionJchronicOptions *) nil_chk(options)) getNow])) java_clone], [JavaUtilCalendar class])];
+  ComMdimensionJchronicUtilsSpan *span = [month thisSpanWithComMdimensionJchronicTagsPointer_PointerType:[options getContext]];
+  JavaUtilCalendar *dayStart = ComMdimensionJchronicUtilsTime_constructWithInt_withInt_withInt_([((JavaUtilCalendar *) nil_chk([((ComMdimensionJchronicUtilsSpan *) nil_chk(span)) getBeginCalendar])) getWithInt:JavaUtilCalendar_YEAR], [((JavaUtilCalendar *) nil_chk([span getBeginCalendar])) getWithInt:JavaUtilCalendar_MONTH] + 1, [((JavaLangInteger *) nil_chk([((ComMdimensionJchronicTagsTag *) nil_chk(day)) getType])) intValue]);
+  return ComMdimensionJchronicHandlersHandler_dayOrTimeWithJavaUtilCalendar_withJavaUtilList_withComMdimensionJchronicOptions_(dayStart, timeTokens, options);
+}
 
 @end
 

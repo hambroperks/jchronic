@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersRepeaterUnit
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersRepeaterUnit_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterUnit || defined(INCLUDE_ComMdimensionJchronicRepeatersRepeaterUnit))
 #define ComMdimensionJchronicRepeatersRepeaterUnit_
 
@@ -64,17 +69,13 @@ typedef NS_ENUM(NSUInteger, ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_
   ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_Enum_SECOND = 9,
 };
 
-@interface ComMdimensionJchronicRepeatersRepeaterUnit_UnitName : JavaLangEnum < NSCopying >
+@interface ComMdimensionJchronicRepeatersRepeaterUnit_UnitName : JavaLangEnum
 
 #pragma mark Public
 
 + (ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
-
-#pragma mark Package-Private
-
-- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -83,37 +84,37 @@ J2OBJC_STATIC_INIT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName)
 /*! INTERNAL ONLY - Use enum accessors declared below. */
 FOUNDATION_EXPORT ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_values_[];
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_YEAR();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_YEAR(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, YEAR)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_SEASON();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_SEASON(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, SEASON)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_MONTH();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_MONTH(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, MONTH)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_FORTNIGHT();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_FORTNIGHT(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, FORTNIGHT)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_WEEK();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_WEEK(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, WEEK)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_WEEKEND();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_WEEKEND(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, WEEKEND)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_DAY();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_DAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, DAY)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_HOUR();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_HOUR(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, HOUR)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_MINUTE();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_MINUTE(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, MINUTE)
 
-inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_SECOND();
+inline ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_get_SECOND(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName, SECOND)
 
-FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_values();
+FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_values(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_valueOfWithNSString_(NSString *name);
 
@@ -123,4 +124,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterUnit")

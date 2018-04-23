@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsSeparator
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsSeparator_) && (INCLUDE_ALL_ComMdimensionJchronicTagsSeparator || defined(INCLUDE_ComMdimensionJchronicTagsSeparator))
 #define ComMdimensionJchronicTagsSeparator_
 
@@ -36,6 +41,10 @@
         withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options;
 
 - (NSString *)description;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -71,17 +80,13 @@ typedef NS_ENUM(NSUInteger, ComMdimensionJchronicTagsSeparator_SeparatorType_Enu
   ComMdimensionJchronicTagsSeparator_SeparatorType_Enum_IN = 5,
 };
 
-@interface ComMdimensionJchronicTagsSeparator_SeparatorType : JavaLangEnum < NSCopying >
+@interface ComMdimensionJchronicTagsSeparator_SeparatorType : JavaLangEnum
 
 #pragma mark Public
 
 + (ComMdimensionJchronicTagsSeparator_SeparatorType *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
-
-#pragma mark Package-Private
-
-- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -90,25 +95,25 @@ J2OBJC_STATIC_INIT(ComMdimensionJchronicTagsSeparator_SeparatorType)
 /*! INTERNAL ONLY - Use enum accessors declared below. */
 FOUNDATION_EXPORT ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_values_[];
 
-inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_COMMA();
+inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_COMMA(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsSeparator_SeparatorType, COMMA)
 
-inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_DASH();
+inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_DASH(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsSeparator_SeparatorType, DASH)
 
-inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_SLASH();
+inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_SLASH(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsSeparator_SeparatorType, SLASH)
 
-inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_AT();
+inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_AT(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsSeparator_SeparatorType, AT)
 
-inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_NEWLINE();
+inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_NEWLINE(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsSeparator_SeparatorType, NEWLINE)
 
-inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_IN();
+inline ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_get_IN(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsSeparator_SeparatorType, IN)
 
-FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicTagsSeparator_SeparatorType_values();
+FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicTagsSeparator_SeparatorType_values(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSeparator_SeparatorType_valueOfWithNSString_(NSString *name);
 
@@ -118,4 +123,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsSeparator_SeparatorType)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsSeparator")

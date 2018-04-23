@@ -18,6 +18,13 @@
 
 @implementation ComMdimensionJchronicHandlersSmSdHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicHandlersSmSdHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
   jint month = [((JavaLangInteger *) nil_chk([((ComMdimensionJchronicTagsScalarMonth *) nil_chk([((ComMdimensionJchronicUtilsToken *) nil_chk([((id<JavaUtilList>) nil_chk(tokens)) getWithInt:0])) getTagWithIOSClass:ComMdimensionJchronicTagsScalarMonth_class_()])) getType])) intValue];
@@ -26,13 +33,6 @@
   JavaUtilCalendar *end = ComMdimensionJchronicUtilsTime_cloneAndAddWithJavaUtilCalendar_withInt_withLong_(start, JavaUtilCalendar_DAY_OF_MONTH, 1);
   return create_ComMdimensionJchronicUtilsSpan_initWithJavaUtilCalendar_withJavaUtilCalendar_(start, end);
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicHandlersSmSdHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

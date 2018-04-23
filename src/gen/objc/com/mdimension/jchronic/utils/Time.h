@@ -84,6 +84,12 @@
 
 J2OBJC_EMPTY_STATIC_INIT(ComMdimensionJchronicUtilsTime)
 
+FOUNDATION_EXPORT void ComMdimensionJchronicUtilsTime_init(ComMdimensionJchronicUtilsTime *self);
+
+FOUNDATION_EXPORT ComMdimensionJchronicUtilsTime *new_ComMdimensionJchronicUtilsTime_init(void) NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT ComMdimensionJchronicUtilsTime *create_ComMdimensionJchronicUtilsTime_init(void);
+
 FOUNDATION_EXPORT JavaUtilCalendar *ComMdimensionJchronicUtilsTime_constructWithInt_withInt_(jint year, jint month);
 
 FOUNDATION_EXPORT JavaUtilCalendar *ComMdimensionJchronicUtilsTime_constructWithInt_withInt_withInt_(jint year, jint month, jint day);
@@ -113,12 +119,6 @@ FOUNDATION_EXPORT JavaUtilCalendar *ComMdimensionJchronicUtilsTime_ymdhWithJavaU
 FOUNDATION_EXPORT JavaUtilCalendar *ComMdimensionJchronicUtilsTime_ymdhmWithJavaUtilCalendar_(JavaUtilCalendar *basis);
 
 FOUNDATION_EXPORT JavaUtilCalendar *ComMdimensionJchronicUtilsTime_cloneAndAddWithJavaUtilCalendar_withInt_withLong_(JavaUtilCalendar *basis, jint field, jlong amount);
-
-FOUNDATION_EXPORT void ComMdimensionJchronicUtilsTime_init(ComMdimensionJchronicUtilsTime *self);
-
-FOUNDATION_EXPORT ComMdimensionJchronicUtilsTime *new_ComMdimensionJchronicUtilsTime_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT ComMdimensionJchronicUtilsTime *create_ComMdimensionJchronicUtilsTime_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicUtilsTime)
 

@@ -91,10 +91,6 @@ ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSepar
   return ComMdimensionJchronicTagsSeparator_SeparatorType_valueOfWithNSString_(name);
 }
 
-- (id)copyWithZone:(NSZone *)zone {
-  return self;
-}
-
 + (void)initialize {
   if (self == [ComMdimensionJchronicTagsSeparator_SeparatorType class]) {
     size_t objSize = class_getInstanceSize(self);

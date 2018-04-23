@@ -3,7 +3,6 @@
 //  source: /Users/marcussmith/temp/jchronic/src/main/java/com/mdimension/jchronic/repeaters/RepeaterTime.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "com/mdimension/jchronic/Options.h"
 #include "com/mdimension/jchronic/repeaters/Repeater.h"
@@ -35,7 +34,7 @@
 
 J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterTime, _currentTime_, JavaUtilCalendar *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterTime_get_TIME_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterTime_get_TIME_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicRepeatersRepeaterTime_TIME_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicRepeatersRepeaterTime, TIME_PATTERN, JavaUtilRegexPattern *)
 
@@ -169,9 +168,9 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicRepeatersRepeaterTime)
 
 void ComMdimensionJchronicRepeatersRepeaterTime_initWithNSString_(ComMdimensionJchronicRepeatersRepeaterTime *self, NSString *time) {
   ComMdimensionJchronicRepeatersRepeater_initWithId_(self, nil);
-  NSString *t = [((NSString *) nil_chk(time)) replaceAll:@":" withReplacement:@""];
+  NSString *t = [((NSString *) nil_chk(time)) java_replaceAll:@":" withReplacement:@""];
   ComMdimensionJchronicUtilsTick *type;
-  jint length = ((jint) [((NSString *) nil_chk(t)) length]);
+  jint length = [((NSString *) nil_chk(t)) java_length];
   if (length <= 2) {
     jint hours = JavaLangInteger_parseIntWithNSString_(t);
     jint hoursInSeconds = hours * 60 * 60;
@@ -183,15 +182,15 @@ void ComMdimensionJchronicRepeatersRepeaterTime_initWithNSString_(ComMdimensionJ
     }
   }
   else if (length == 3) {
-    jint hoursInSeconds = JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:1]) * 60 * 60;
-    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t substring:1]) * 60;
+    jint hoursInSeconds = JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:1]) * 60 * 60;
+    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t java_substring:1]) * 60;
     type = create_ComMdimensionJchronicUtilsTick_initWithInt_withBoolean_(hoursInSeconds + minutesInSeconds, true);
   }
   else if (length == 4) {
-    jboolean ambiguous = ([time contains:@":"] && JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:1]) != 0 && JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:2]) <= 12);
-    jint hours = JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:2]);
+    jboolean ambiguous = ([time java_contains:@":"] && JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:1]) != 0 && JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:2]) <= 12);
+    jint hours = JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:2]);
     jint hoursInSeconds = hours * 60 * 60;
-    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t substring:2]) * 60;
+    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t java_substring:2]) * 60;
     if (hours == 12) {
       type = create_ComMdimensionJchronicUtilsTick_initWithInt_withBoolean_(0 * 60 * 60 + minutesInSeconds, ambiguous);
     }
@@ -200,17 +199,17 @@ void ComMdimensionJchronicRepeatersRepeaterTime_initWithNSString_(ComMdimensionJ
     }
   }
   else if (length == 5) {
-    jint hoursInSeconds = JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:1]) * 60 * 60;
-    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t substring:1 endIndex:3]) * 60;
-    jint seconds = JavaLangInteger_parseIntWithNSString_([t substring:3]);
+    jint hoursInSeconds = JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:1]) * 60 * 60;
+    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t java_substring:1 endIndex:3]) * 60;
+    jint seconds = JavaLangInteger_parseIntWithNSString_([t java_substring:3]);
     type = create_ComMdimensionJchronicUtilsTick_initWithInt_withBoolean_(hoursInSeconds + minutesInSeconds + seconds, true);
   }
   else if (length == 6) {
-    jboolean ambiguous = ([time contains:@":"] && JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:1]) != 0 && JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:2]) <= 12);
-    jint hours = JavaLangInteger_parseIntWithNSString_([t substring:0 endIndex:2]);
+    jboolean ambiguous = ([time java_contains:@":"] && JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:1]) != 0 && JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:2]) <= 12);
+    jint hours = JavaLangInteger_parseIntWithNSString_([t java_substring:0 endIndex:2]);
     jint hoursInSeconds = hours * 60 * 60;
-    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t substring:2 endIndex:4]) * 60;
-    jint seconds = JavaLangInteger_parseIntWithNSString_([t substring:4 endIndex:6]);
+    jint minutesInSeconds = JavaLangInteger_parseIntWithNSString_([t java_substring:2 endIndex:4]) * 60;
+    jint seconds = JavaLangInteger_parseIntWithNSString_([t java_substring:4 endIndex:6]);
     if (hours == 12) {
       type = create_ComMdimensionJchronicUtilsTick_initWithInt_withBoolean_(0 * 60 * 60 + minutesInSeconds + seconds, ambiguous);
     }

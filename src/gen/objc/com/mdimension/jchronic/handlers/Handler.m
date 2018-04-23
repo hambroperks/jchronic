@@ -80,7 +80,7 @@
 J2OBJC_FIELD_SETTER(ComMdimensionJchronicHandlersHandler, _patterns_, IOSObjectArray *)
 J2OBJC_FIELD_SETTER(ComMdimensionJchronicHandlersHandler, _handler_, id<ComMdimensionJchronicHandlersIHandler>)
 
-inline id<JavaUtilMap> ComMdimensionJchronicHandlersHandler_get__definitions();
+inline id<JavaUtilMap> ComMdimensionJchronicHandlersHandler_get__definitions(void);
 inline id<JavaUtilMap> ComMdimensionJchronicHandlersHandler_set__definitions(id<JavaUtilMap> value);
 static id<JavaUtilMap> ComMdimensionJchronicHandlersHandler__definitions;
 J2OBJC_STATIC_FIELD_OBJ(ComMdimensionJchronicHandlersHandler, _definitions, id<JavaUtilMap>)
@@ -262,7 +262,7 @@ id<JavaUtilMap> ComMdimensionJchronicHandlersHandler_definitions() {
       [definitions putWithId:JreLoadEnum(ComMdimensionJchronicHandlersHandler_HandlerType, NARROW) withId:narrowHandlers];
       JreStrongAssign(&ComMdimensionJchronicHandlersHandler__definitions, definitions);
     }
-    return ComMdimensionJchronicHandlersHandler__definitions;
+    return JreRetainedLocalValue(ComMdimensionJchronicHandlersHandler__definitions);
   }
 }
 
@@ -355,7 +355,7 @@ ComMdimensionJchronicUtilsSpan *ComMdimensionJchronicHandlersHandler_getAnchorWi
     [tokens removeWithInt:[tokens size] - 1];
   }
   ComMdimensionJchronicRepeatersRepeater *head = [repeaters removeWithInt:0];
-  [((ComMdimensionJchronicRepeatersRepeater *) nil_chk(head)) setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([((ComMdimensionJchronicOptions *) nil_chk(options)) getNow])) clone], [JavaUtilCalendar class])];
+  [((ComMdimensionJchronicRepeatersRepeater *) nil_chk(head)) setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([((ComMdimensionJchronicOptions *) nil_chk(options)) getNow])) java_clone], [JavaUtilCalendar class])];
   ComMdimensionJchronicUtilsSpan *outerSpan;
   ComMdimensionJchronicTagsGrabber_Relative *grabberType = [((ComMdimensionJchronicTagsGrabber *) nil_chk(grabber)) getType];
   if (grabberType == JreLoadEnum(ComMdimensionJchronicTagsGrabber_Relative, LAST)) {
@@ -402,7 +402,7 @@ ComMdimensionJchronicUtilsSpan *ComMdimensionJchronicHandlersHandler_findWithinW
     return span;
   }
   ComMdimensionJchronicRepeatersRepeater *head = [tags getWithInt:0];
-  id<JavaUtilList> rest = ([tags size] > 1) ? [tags subListWithInt:1 withInt:[tags size]] : (id) create_JavaUtilLinkedList_init();
+  id<JavaUtilList> rest = ([tags size] > 1) ? [tags subListWithInt:1 withInt:[tags size]] : create_JavaUtilLinkedList_init();
   [((ComMdimensionJchronicRepeatersRepeater *) nil_chk(head)) setStartWithJavaUtilCalendar:(pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) ? [((ComMdimensionJchronicUtilsSpan *) nil_chk(span)) getBeginCalendar] : [((ComMdimensionJchronicUtilsSpan *) nil_chk(span)) getEndCalendar]];
   ComMdimensionJchronicUtilsSpan *h = [head thisSpanWithComMdimensionJchronicTagsPointer_PointerType:JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, NONE)];
   if ([span containsWithLong:[((ComMdimensionJchronicUtilsSpan *) nil_chk(h)) getBegin]] || [span containsWithLong:[h getEnd]]) {
@@ -484,10 +484,6 @@ ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersH
 
 + (ComMdimensionJchronicHandlersHandler_HandlerType *)valueOfWithNSString:(NSString *)name {
   return ComMdimensionJchronicHandlersHandler_HandlerType_valueOfWithNSString_(name);
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-  return self;
 }
 
 + (void)initialize {

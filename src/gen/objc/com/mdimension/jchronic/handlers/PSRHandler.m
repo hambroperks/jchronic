@@ -14,6 +14,13 @@
 
 @implementation ComMdimensionJchronicHandlersPSRHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicHandlersPSRHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
   id<JavaUtilList> newTokens = create_JavaUtilLinkedList_init();
@@ -22,13 +29,6 @@
   [newTokens addWithId:[tokens getWithInt:0]];
   return [super handleWithJavaUtilList:newTokens withComMdimensionJchronicOptions:options];
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicHandlersPSRHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

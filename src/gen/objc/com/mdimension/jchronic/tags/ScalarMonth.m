@@ -15,7 +15,7 @@
 
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarMonth_get_MONTH_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarMonth_get_MONTH_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarMonth_MONTH_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsScalarMonth, MONTH_PATTERN, JavaUtilRegexPattern *)
 

@@ -20,7 +20,7 @@
 
 /*!
  @brief Tokens are tagged with subclassed instances of this class when
- they match specific criteria
+  they match specific criteria
  */
 @interface ComMdimensionJchronicTagsTag : NSObject
 
@@ -35,6 +35,10 @@
 - (void)setStartWithJavaUtilCalendar:(JavaUtilCalendar *)s;
 
 - (void)setTypeWithId:(id)type;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

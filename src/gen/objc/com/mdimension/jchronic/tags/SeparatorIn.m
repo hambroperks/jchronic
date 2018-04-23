@@ -16,7 +16,7 @@
 
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorIn_get_IN_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorIn_get_IN_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorIn_IN_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsSeparatorIn, IN_PATTERN, JavaUtilRegexPattern *)
 

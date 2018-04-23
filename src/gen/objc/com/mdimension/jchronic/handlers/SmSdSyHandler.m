@@ -23,6 +23,13 @@
 
 @implementation ComMdimensionJchronicHandlersSmSdSyHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicHandlersSmSdSyHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
   jint month = [((JavaLangInteger *) nil_chk([((ComMdimensionJchronicTagsScalarMonth *) nil_chk([((ComMdimensionJchronicUtilsToken *) nil_chk([((id<JavaUtilList>) nil_chk(tokens)) getWithInt:0])) getTagWithIOSClass:ComMdimensionJchronicTagsScalarMonth_class_()])) getType])) intValue];
@@ -36,19 +43,12 @@
   }
   @catch (JavaLangIllegalArgumentException *e) {
     if ([((ComMdimensionJchronicOptions *) nil_chk(options)) isDebug]) {
-      [((JavaLangIllegalArgumentException *) nil_chk(e)) printStackTraceWithJavaIoPrintStream:JreLoadStatic(JavaLangSystem, out)];
+      [e printStackTraceWithJavaIoPrintStream:JreLoadStatic(JavaLangSystem, out)];
     }
     span = nil;
   }
   return span;
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicHandlersSmSdSyHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

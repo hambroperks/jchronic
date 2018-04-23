@@ -16,17 +16,17 @@
 
 @implementation ComMdimensionJchronicHandlersRmnSdHandler
 
-- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
-                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
-  return [self handleWithComMdimensionJchronicRepeatersRepeater:((ComMdimensionJchronicRepeatersRepeaterMonthName *) [((ComMdimensionJchronicUtilsToken *) nil_chk([((id<JavaUtilList>) nil_chk(tokens)) getWithInt:0])) getTagWithIOSClass:ComMdimensionJchronicRepeatersRepeaterMonthName_class_()]) withComMdimensionJchronicTagsTag:[((ComMdimensionJchronicUtilsToken *) nil_chk([tokens getWithInt:1])) getTagWithIOSClass:ComMdimensionJchronicTagsScalarDay_class_()] withJavaUtilList:[tokens subListWithInt:2 withInt:[tokens size]] withComMdimensionJchronicOptions:options];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComMdimensionJchronicHandlersRmnSdHandler_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
+                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
+  return [self handleWithComMdimensionJchronicRepeatersRepeater:((ComMdimensionJchronicRepeatersRepeaterMonthName *) [((ComMdimensionJchronicUtilsToken *) nil_chk([((id<JavaUtilList>) nil_chk(tokens)) getWithInt:0])) getTagWithIOSClass:ComMdimensionJchronicRepeatersRepeaterMonthName_class_()]) withComMdimensionJchronicTagsTag:[((ComMdimensionJchronicUtilsToken *) nil_chk([tokens getWithInt:1])) getTagWithIOSClass:ComMdimensionJchronicTagsScalarDay_class_()] withJavaUtilList:[tokens subListWithInt:2 withInt:[tokens size]] withComMdimensionJchronicOptions:options];
+}
 
 @end
 

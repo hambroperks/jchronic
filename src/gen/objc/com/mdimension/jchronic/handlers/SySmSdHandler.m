@@ -14,6 +14,13 @@
 
 @implementation ComMdimensionJchronicHandlersSySmSdHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicHandlersSySmSdHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
   id<JavaUtilList> newTokens = create_JavaUtilLinkedList_init();
@@ -23,13 +30,6 @@
   [newTokens addAllWithJavaUtilCollection:[tokens subListWithInt:3 withInt:[tokens size]]];
   return [super handleWithJavaUtilList:newTokens withComMdimensionJchronicOptions:options];
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicHandlersSySmSdHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

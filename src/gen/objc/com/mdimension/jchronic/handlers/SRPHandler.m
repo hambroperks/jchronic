@@ -19,6 +19,13 @@
 
 @implementation ComMdimensionJchronicHandlersSRPHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicHandlersSRPHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                         withComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)span
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
@@ -34,13 +41,6 @@
   ComMdimensionJchronicUtilsSpan *span = ComMdimensionJchronicChronic_parseWithNSString_withComMdimensionJchronicOptions_(@"this second", create_ComMdimensionJchronicOptions_initWithJavaUtilCalendar_withBoolean_([((ComMdimensionJchronicOptions *) nil_chk(options)) getNow], false));
   return [self handleWithJavaUtilList:tokens withComMdimensionJchronicUtilsSpan:span withComMdimensionJchronicOptions:options];
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicHandlersSRPHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

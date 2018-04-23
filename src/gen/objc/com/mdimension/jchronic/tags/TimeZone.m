@@ -3,7 +3,6 @@
 //  source: /Users/marcussmith/temp/jchronic/src/main/java/com/mdimension/jchronic/tags/TimeZone.java
 //
 
-#include "IOSClass.h"
 #include "J2ObjC_source.h"
 #include "com/mdimension/jchronic/Options.h"
 #include "com/mdimension/jchronic/tags/Tag.h"
@@ -16,7 +15,7 @@
 #include "java/util/regex/Matcher.h"
 #include "java/util/regex/Pattern.h"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsTimeZone_get_TIMEZONE_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsTimeZone_get_TIMEZONE_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsTimeZone_TIMEZONE_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsTimeZone, TIMEZONE_PATTERN, JavaUtilRegexPattern *)
 

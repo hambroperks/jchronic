@@ -21,6 +21,13 @@
 
 @implementation ComMdimensionJchronicHandlersORRHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicHandlersORRHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                         withComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)outerSpan
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
@@ -37,13 +44,6 @@
   }
   return span;
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicHandlersORRHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

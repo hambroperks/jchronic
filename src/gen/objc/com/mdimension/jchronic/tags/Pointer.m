@@ -20,15 +20,15 @@
 
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_get_IN_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_get_IN_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_IN_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsPointer, IN_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_get_FUTURE_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_get_FUTURE_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_FUTURE_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsPointer, FUTURE_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_get_PAST_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_get_PAST_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsPointer_PAST_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsPointer, PAST_PATTERN, JavaUtilRegexPattern *)
 
@@ -119,10 +119,6 @@ ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_P
 
 + (ComMdimensionJchronicTagsPointer_PointerType *)valueOfWithNSString:(NSString *)name {
   return ComMdimensionJchronicTagsPointer_PointerType_valueOfWithNSString_(name);
-}
-
-- (id)copyWithZone:(NSZone *)zone {
-  return self;
 }
 
 + (void)initialize {

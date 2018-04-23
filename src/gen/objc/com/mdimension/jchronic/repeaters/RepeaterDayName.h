@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersRepeaterDayName
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersRepeaterDayName_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterDayName || defined(INCLUDE_ComMdimensionJchronicRepeatersRepeaterDayName))
 #define ComMdimensionJchronicRepeatersRepeaterDayName_
 
@@ -49,11 +54,15 @@
 
 - (ComMdimensionJchronicUtilsSpan *)_thisSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer;
 
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+
 @end
 
 J2OBJC_STATIC_INIT(ComMdimensionJchronicRepeatersRepeaterDayName)
 
-inline jint ComMdimensionJchronicRepeatersRepeaterDayName_get_DAY_SECONDS();
+inline jint ComMdimensionJchronicRepeatersRepeaterDayName_get_DAY_SECONDS(void);
 #define ComMdimensionJchronicRepeatersRepeaterDayName_DAY_SECONDS 86400
 J2OBJC_STATIC_FIELD_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName, DAY_SECONDS, jint)
 
@@ -88,17 +97,13 @@ typedef NS_ENUM(NSUInteger, ComMdimensionJchronicRepeatersRepeaterDayName_DayNam
   ComMdimensionJchronicRepeatersRepeaterDayName_DayName_Enum_SATURDAY = 6,
 };
 
-@interface ComMdimensionJchronicRepeatersRepeaterDayName_DayName : JavaLangEnum < NSCopying >
+@interface ComMdimensionJchronicRepeatersRepeaterDayName_DayName : JavaLangEnum
 
 #pragma mark Public
 
 + (ComMdimensionJchronicRepeatersRepeaterDayName_DayName *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
-
-#pragma mark Package-Private
-
-- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -107,28 +112,28 @@ J2OBJC_STATIC_INIT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName)
 /*! INTERNAL ONLY - Use enum accessors declared below. */
 FOUNDATION_EXPORT ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_values_[];
 
-inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_SUNDAY();
+inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_SUNDAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, SUNDAY)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_MONDAY();
+inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_MONDAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, MONDAY)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_TUESDAY();
+inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_TUESDAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, TUESDAY)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_WEDNESDAY();
+inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_WEDNESDAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, WEDNESDAY)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_THURSDAY();
+inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_THURSDAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, THURSDAY)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_FRIDAY();
+inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_FRIDAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, FRIDAY)
 
-inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_SATURDAY();
+inline ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_get_SATURDAY(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, SATURDAY)
 
-FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_values();
+FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_values(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepeatersRepeaterDayName_DayName_valueOfWithNSString_(NSString *name);
 
@@ -138,4 +143,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersRepeaterDayName_DayName
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterDayName")

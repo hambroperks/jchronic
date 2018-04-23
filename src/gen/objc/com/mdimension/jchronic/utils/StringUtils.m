@@ -9,10 +9,6 @@
 
 @implementation ComMdimensionJchronicUtilsStringUtils
 
-+ (JavaLangInteger *)integerValueWithNSString:(NSString *)str {
-  return ComMdimensionJchronicUtilsStringUtils_integerValueWithNSString_(str);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComMdimensionJchronicUtilsStringUtils_init(self);
@@ -20,50 +16,11 @@ J2OBJC_IGNORE_DESIGNATED_BEGIN
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-@end
-
-JavaLangInteger *ComMdimensionJchronicUtilsStringUtils_integerValueWithNSString_(NSString *str) {
-  ComMdimensionJchronicUtilsStringUtils_initialize();
-  if (str != nil) {
-    if ([@"one" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(1);
-    }
-    else if ([@"two" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(2);
-    }
-    else if ([@"three" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(3);
-    }
-    else if ([@"four" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(4);
-    }
-    else if ([@"five" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(5);
-    }
-    else if ([@"six" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(6);
-    }
-    else if ([@"seven" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(7);
-    }
-    else if ([@"eight" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(8);
-    }
-    else if ([@"nine" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(9);
-    }
-    else if ([@"ten" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(10);
-    }
-    else if ([@"eleven" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(11);
-    }
-    else if ([@"twelve" equalsIgnoreCase:str]) {
-      return JavaLangInteger_valueOfWithInt_(12);
-    }
-  }
-  return nil;
++ (JavaLangInteger *)integerValueWithNSString:(NSString *)str {
+  return ComMdimensionJchronicUtilsStringUtils_integerValueWithNSString_(str);
 }
+
+@end
 
 void ComMdimensionJchronicUtilsStringUtils_init(ComMdimensionJchronicUtilsStringUtils *self) {
   NSObject_init(self);
@@ -75,6 +32,49 @@ ComMdimensionJchronicUtilsStringUtils *new_ComMdimensionJchronicUtilsStringUtils
 
 ComMdimensionJchronicUtilsStringUtils *create_ComMdimensionJchronicUtilsStringUtils_init() {
   J2OBJC_CREATE_IMPL(ComMdimensionJchronicUtilsStringUtils, init)
+}
+
+JavaLangInteger *ComMdimensionJchronicUtilsStringUtils_integerValueWithNSString_(NSString *str) {
+  ComMdimensionJchronicUtilsStringUtils_initialize();
+  if (str != nil) {
+    if ([@"one" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(1);
+    }
+    else if ([@"two" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(2);
+    }
+    else if ([@"three" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(3);
+    }
+    else if ([@"four" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(4);
+    }
+    else if ([@"five" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(5);
+    }
+    else if ([@"six" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(6);
+    }
+    else if ([@"seven" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(7);
+    }
+    else if ([@"eight" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(8);
+    }
+    else if ([@"nine" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(9);
+    }
+    else if ([@"ten" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(10);
+    }
+    else if ([@"eleven" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(11);
+    }
+    else if ([@"twelve" java_equalsIgnoreCase:str]) {
+      return JavaLangInteger_valueOfWithInt_(12);
+    }
+  }
+  return nil;
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComMdimensionJchronicUtilsStringUtils)

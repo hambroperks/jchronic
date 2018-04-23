@@ -36,9 +36,13 @@
 - (NSUInteger)hash;
 
 /*!
- @brief Returns true if the start and end are the same (i.e. this is a single value).
+ @brief Returns true if the start and end are the same (i.e.this is a single value).
  */
 - (jboolean)isSingularity;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 

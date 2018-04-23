@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsPointer
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsPointer_) && (INCLUDE_ALL_ComMdimensionJchronicTagsPointer || defined(INCLUDE_ComMdimensionJchronicTagsPointer))
 #define ComMdimensionJchronicTagsPointer_
 
@@ -40,6 +45,10 @@
                                                    withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options;
 
 - (NSString *)description;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -74,17 +83,13 @@ typedef NS_ENUM(NSUInteger, ComMdimensionJchronicTagsPointer_PointerType_Enum) {
   ComMdimensionJchronicTagsPointer_PointerType_Enum_NONE = 2,
 };
 
-@interface ComMdimensionJchronicTagsPointer_PointerType : JavaLangEnum < NSCopying >
+@interface ComMdimensionJchronicTagsPointer_PointerType : JavaLangEnum
 
 #pragma mark Public
 
 + (ComMdimensionJchronicTagsPointer_PointerType *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
-
-#pragma mark Package-Private
-
-- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -93,16 +98,16 @@ J2OBJC_STATIC_INIT(ComMdimensionJchronicTagsPointer_PointerType)
 /*! INTERNAL ONLY - Use enum accessors declared below. */
 FOUNDATION_EXPORT ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_values_[];
 
-inline ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_get_PAST();
+inline ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_get_PAST(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsPointer_PointerType, PAST)
 
-inline ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_get_FUTURE();
+inline ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_get_FUTURE(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)
 
-inline ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_get_NONE();
+inline ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_get_NONE(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsPointer_PointerType, NONE)
 
-FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicTagsPointer_PointerType_values();
+FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicTagsPointer_PointerType_values(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_PointerType_valueOfWithNSString_(NSString *name);
 
@@ -112,4 +117,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsPointer_PointerType)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsPointer")

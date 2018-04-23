@@ -10,6 +10,13 @@
 
 @implementation ComMdimensionJchronicUtilsTime
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicUtilsTime_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (JavaUtilCalendar *)constructWithInt:(jint)year
                                withInt:(jint)month {
   return ComMdimensionJchronicUtilsTime_constructWithInt_withInt_(year, month);
@@ -96,14 +103,19 @@
   return ComMdimensionJchronicUtilsTime_cloneAndAddWithJavaUtilCalendar_withInt_withLong_(basis, field, amount);
 }
 
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicUtilsTime_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
-
 @end
+
+void ComMdimensionJchronicUtilsTime_init(ComMdimensionJchronicUtilsTime *self) {
+  NSObject_init(self);
+}
+
+ComMdimensionJchronicUtilsTime *new_ComMdimensionJchronicUtilsTime_init() {
+  J2OBJC_NEW_IMPL(ComMdimensionJchronicUtilsTime, init)
+}
+
+ComMdimensionJchronicUtilsTime *create_ComMdimensionJchronicUtilsTime_init() {
+  J2OBJC_CREATE_IMPL(ComMdimensionJchronicUtilsTime, init)
+}
 
 JavaUtilCalendar *ComMdimensionJchronicUtilsTime_constructWithInt_withInt_(jint year, jint month) {
   ComMdimensionJchronicUtilsTime_initialize();
@@ -210,21 +222,9 @@ JavaUtilCalendar *ComMdimensionJchronicUtilsTime_ymdhmWithJavaUtilCalendar_(Java
 
 JavaUtilCalendar *ComMdimensionJchronicUtilsTime_cloneAndAddWithJavaUtilCalendar_withInt_withLong_(JavaUtilCalendar *basis, jint field, jlong amount) {
   ComMdimensionJchronicUtilsTime_initialize();
-  JavaUtilCalendar *next = (JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk(basis)) clone], [JavaUtilCalendar class]);
+  JavaUtilCalendar *next = (JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk(basis)) java_clone], [JavaUtilCalendar class]);
   [((JavaUtilCalendar *) nil_chk(next)) addWithInt:field withInt:(jint) amount];
   return next;
-}
-
-void ComMdimensionJchronicUtilsTime_init(ComMdimensionJchronicUtilsTime *self) {
-  NSObject_init(self);
-}
-
-ComMdimensionJchronicUtilsTime *new_ComMdimensionJchronicUtilsTime_init() {
-  J2OBJC_NEW_IMPL(ComMdimensionJchronicUtilsTime, init)
-}
-
-ComMdimensionJchronicUtilsTime *create_ComMdimensionJchronicUtilsTime_init() {
-  J2OBJC_CREATE_IMPL(ComMdimensionJchronicUtilsTime, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComMdimensionJchronicUtilsTime)

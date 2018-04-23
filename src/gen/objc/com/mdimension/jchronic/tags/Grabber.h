@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsGrabber
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsGrabber_) && (INCLUDE_ALL_ComMdimensionJchronicTagsGrabber || defined(INCLUDE_ComMdimensionJchronicTagsGrabber))
 #define ComMdimensionJchronicTagsGrabber_
 
@@ -40,6 +45,10 @@
                                                    withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options;
 
 - (NSString *)description;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -74,17 +83,13 @@ typedef NS_ENUM(NSUInteger, ComMdimensionJchronicTagsGrabber_Relative_Enum) {
   ComMdimensionJchronicTagsGrabber_Relative_Enum_THIS = 2,
 };
 
-@interface ComMdimensionJchronicTagsGrabber_Relative : JavaLangEnum < NSCopying >
+@interface ComMdimensionJchronicTagsGrabber_Relative : JavaLangEnum
 
 #pragma mark Public
 
 + (ComMdimensionJchronicTagsGrabber_Relative *)valueOfWithNSString:(NSString *)name;
 
 + (IOSObjectArray *)values;
-
-#pragma mark Package-Private
-
-- (id)copyWithZone:(NSZone *)zone;
 
 @end
 
@@ -93,16 +98,16 @@ J2OBJC_STATIC_INIT(ComMdimensionJchronicTagsGrabber_Relative)
 /*! INTERNAL ONLY - Use enum accessors declared below. */
 FOUNDATION_EXPORT ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_values_[];
 
-inline ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_get_LAST();
+inline ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_get_LAST(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsGrabber_Relative, LAST)
 
-inline ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_get_NEXT();
+inline ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_get_NEXT(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsGrabber_Relative, NEXT)
 
-inline ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_get_THIS();
+inline ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_get_THIS(void);
 J2OBJC_ENUM_CONSTANT(ComMdimensionJchronicTagsGrabber_Relative, THIS)
 
-FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicTagsGrabber_Relative_values();
+FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicTagsGrabber_Relative_values(void);
 
 FOUNDATION_EXPORT ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Relative_valueOfWithNSString_(NSString *name);
 
@@ -112,4 +117,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsGrabber_Relative)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsGrabber")

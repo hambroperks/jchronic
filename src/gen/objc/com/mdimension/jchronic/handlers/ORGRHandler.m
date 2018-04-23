@@ -13,18 +13,18 @@
 
 @implementation ComMdimensionJchronicHandlersORGRHandler
 
-- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
-                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
-  ComMdimensionJchronicUtilsSpan *outerSpan = ComMdimensionJchronicHandlersHandler_getAnchorWithJavaUtilList_withComMdimensionJchronicOptions_([((id<JavaUtilList>) nil_chk(tokens)) subListWithInt:2 withInt:4], options);
-  return [self handleWithJavaUtilList:[tokens subListWithInt:0 withInt:2] withComMdimensionJchronicUtilsSpan:outerSpan withComMdimensionJchronicOptions:options];
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComMdimensionJchronicHandlersORGRHandler_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
+                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
+  ComMdimensionJchronicUtilsSpan *outerSpan = ComMdimensionJchronicHandlersHandler_getAnchorWithJavaUtilList_withComMdimensionJchronicOptions_([((id<JavaUtilList>) nil_chk(tokens)) subListWithInt:2 withInt:4], options);
+  return [self handleWithJavaUtilList:[tokens subListWithInt:0 withInt:2] withComMdimensionJchronicUtilsSpan:outerSpan withComMdimensionJchronicOptions:options];
+}
 
 @end
 

@@ -16,11 +16,11 @@
 
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorSlashOrDash_get_SLASH_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorSlashOrDash_get_SLASH_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorSlashOrDash_SLASH_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsSeparatorSlashOrDash, SLASH_PATTERN, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorSlashOrDash_get_DASH_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorSlashOrDash_get_DASH_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsSeparatorSlashOrDash_DASH_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsSeparatorSlashOrDash, DASH_PATTERN, JavaUtilRegexPattern *)
 

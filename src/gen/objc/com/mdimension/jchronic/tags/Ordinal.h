@@ -42,11 +42,15 @@
 
 - (NSString *)description;
 
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+
 @end
 
 J2OBJC_STATIC_INIT(ComMdimensionJchronicTagsOrdinal)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsOrdinal_get_ORDINAL_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsOrdinal_get_ORDINAL_PATTERN(void);
 inline JavaUtilRegexPattern *ComMdimensionJchronicTagsOrdinal_set_ORDINAL_PATTERN(JavaUtilRegexPattern *value);
 /*! INTERNAL ONLY - Use accessor function from above. */
 FOUNDATION_EXPORT JavaUtilRegexPattern *ComMdimensionJchronicTagsOrdinal_ORDINAL_PATTERN;

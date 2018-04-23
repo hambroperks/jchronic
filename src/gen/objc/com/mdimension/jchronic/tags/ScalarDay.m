@@ -15,7 +15,7 @@
 
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarDay_get_DAY_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarDay_get_DAY_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarDay_DAY_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsScalarDay, DAY_PATTERN, JavaUtilRegexPattern *)
 

@@ -43,11 +43,15 @@
 
 - (NSString *)description;
 
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+
 @end
 
 J2OBJC_STATIC_INIT(ComMdimensionJchronicTagsScalar)
 
-inline id<JavaUtilSet> ComMdimensionJchronicTagsScalar_get_TIMES();
+inline id<JavaUtilSet> ComMdimensionJchronicTagsScalar_get_TIMES(void);
 inline id<JavaUtilSet> ComMdimensionJchronicTagsScalar_set_TIMES(id<JavaUtilSet> value);
 /*! INTERNAL ONLY - Use accessor function from above. */
 FOUNDATION_EXPORT id<JavaUtilSet> ComMdimensionJchronicTagsScalar_TIMES;

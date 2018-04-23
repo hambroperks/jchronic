@@ -21,7 +21,7 @@
 
 #pragma clang diagnostic ignored "-Wincomplete-implementation"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalar_get_SCALAR_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicTagsScalar_get_SCALAR_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicTagsScalar_SCALAR_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsScalar, SCALAR_PATTERN, JavaUtilRegexPattern *)
 
@@ -113,7 +113,7 @@ id<JavaUtilList> ComMdimensionJchronicTagsScalar_scanWithJavaUtilList_withComMdi
 ComMdimensionJchronicTagsScalar *ComMdimensionJchronicTagsScalar_scanWithComMdimensionJchronicUtilsToken_withComMdimensionJchronicUtilsToken_withComMdimensionJchronicOptions_(ComMdimensionJchronicUtilsToken *token, ComMdimensionJchronicUtilsToken *postToken, ComMdimensionJchronicOptions *options) {
   ComMdimensionJchronicTagsScalar_initialize();
   if ([((JavaUtilRegexMatcher *) nil_chk([((JavaUtilRegexPattern *) nil_chk(ComMdimensionJchronicTagsScalar_SCALAR_PATTERN)) matcherWithJavaLangCharSequence:[((ComMdimensionJchronicUtilsToken *) nil_chk(token)) getWord]])) matches]) {
-    if ([token getWord] != nil && ((jint) [((NSString *) nil_chk([token getWord])) length]) > 0 && !(postToken != nil && [((id<JavaUtilSet>) nil_chk(ComMdimensionJchronicTagsScalar_TIMES)) containsWithId:[postToken getWord]])) {
+    if ([token getWord] != nil && [((NSString *) nil_chk([token getWord])) java_length] > 0 && !(postToken != nil && [((id<JavaUtilSet>) nil_chk(ComMdimensionJchronicTagsScalar_TIMES)) containsWithId:[postToken getWord]])) {
       return create_ComMdimensionJchronicTagsScalar_initWithJavaLangInteger_(JavaLangInteger_valueOfWithNSString_([token getWord]));
     }
   }

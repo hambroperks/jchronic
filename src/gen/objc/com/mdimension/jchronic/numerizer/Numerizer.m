@@ -16,19 +16,19 @@
 #include "java/util/regex/Matcher.h"
 #include "java/util/regex/Pattern.h"
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_DEHYPHENATOR();
+inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_DEHYPHENATOR(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_DEHYPHENATOR;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicNumerizerNumerizer, DEHYPHENATOR, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_DEHALFER();
+inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_DEHALFER(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_DEHALFER;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicNumerizerNumerizer, DEHALFER, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_DEHAALFER();
+inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_DEHAALFER(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_DEHAALFER;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicNumerizerNumerizer, DEHAALFER, JavaUtilRegexPattern *)
 
-inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_ANDITION_PATTERN();
+inline JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_get_ANDITION_PATTERN(void);
 static JavaUtilRegexPattern *ComMdimensionJchronicNumerizerNumerizer_ANDITION_PATTERN;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicNumerizerNumerizer, ANDITION_PATTERN, JavaUtilRegexPattern *)
 
@@ -61,6 +61,13 @@ IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_BIG_PREFIXES;
 
 @implementation ComMdimensionJchronicNumerizerNumerizer
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicNumerizerNumerizer_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 + (NSString *)numerizeWithNSString:(NSString *)str {
   return ComMdimensionJchronicNumerizerNumerizer_numerizeWithNSString_(str);
 }
@@ -68,13 +75,6 @@ IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_BIG_PREFIXES;
 + (NSString *)anditionWithNSString:(NSString *)str {
   return ComMdimensionJchronicNumerizerNumerizer_anditionWithNSString_(str);
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicNumerizerNumerizer_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 + (void)initialize {
   if (self == [ComMdimensionJchronicNumerizerNumerizer class]) {
@@ -132,6 +132,18 @@ J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 
+void ComMdimensionJchronicNumerizerNumerizer_init(ComMdimensionJchronicNumerizerNumerizer *self) {
+  NSObject_init(self);
+}
+
+ComMdimensionJchronicNumerizerNumerizer *new_ComMdimensionJchronicNumerizerNumerizer_init() {
+  J2OBJC_NEW_IMPL(ComMdimensionJchronicNumerizerNumerizer, init)
+}
+
+ComMdimensionJchronicNumerizerNumerizer *create_ComMdimensionJchronicNumerizerNumerizer_init() {
+  J2OBJC_CREATE_IMPL(ComMdimensionJchronicNumerizerNumerizer, init)
+}
+
 NSString *ComMdimensionJchronicNumerizerNumerizer_numerizeWithNSString_(NSString *str) {
   ComMdimensionJchronicNumerizerNumerizer_initialize();
   NSString *numerizedStr = str;
@@ -157,10 +169,10 @@ NSString *ComMdimensionJchronicNumerizerNumerizer_numerizeWithNSString_(NSString
         JavaLangStringBuffer *matcherBuffer = create_JavaLangStringBuffer_init();
         do {
           if ([matcher groupWithInt:1] == nil) {
-            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_valueOfLong_([tp getNumber])];
+            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_java_valueOfLong_([tp getNumber])];
           }
           else {
-            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_valueOfLong_([tp getNumber] + JavaLangLong_parseLongWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) trim]))];
+            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_java_valueOfLong_([tp getNumber] + JavaLangLong_parseLongWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) java_trim]))];
           }
         }
         while ([matcher find]);
@@ -180,10 +192,10 @@ NSString *ComMdimensionJchronicNumerizerNumerizer_numerizeWithNSString_(NSString
         JavaLangStringBuffer *matcherBuffer = create_JavaLangStringBuffer_init();
         do {
           if ([matcher groupWithInt:1] == nil) {
-            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_valueOfLong_([bp getNumber])];
+            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_java_valueOfLong_([bp getNumber])];
           }
           else {
-            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_valueOfLong_([bp getNumber] * JavaLangLong_parseLongWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) trim]))];
+            [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_java_valueOfLong_([bp getNumber] * JavaLangLong_parseLongWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) java_trim]))];
           }
         }
         while ([matcher find]);
@@ -197,7 +209,7 @@ NSString *ComMdimensionJchronicNumerizerNumerizer_numerizeWithNSString_(NSString
   if ([((JavaUtilRegexMatcher *) nil_chk(matcher)) find]) {
     JavaLangStringBuffer *matcherBuffer = create_JavaLangStringBuffer_init();
     do {
-      [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_valueOfFloat_(JavaLangFloat_parseFloatWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) trim]) + 0.5f)];
+      [matcher appendReplacementWithJavaLangStringBuffer:matcherBuffer withNSString:NSString_java_valueOfFloat_(JavaLangFloat_parseFloatWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) java_trim]) + 0.5f)];
     }
     while ([matcher find]);
     [matcher appendTailWithJavaLangStringBuffer:matcherBuffer];
@@ -211,24 +223,12 @@ NSString *ComMdimensionJchronicNumerizerNumerizer_anditionWithNSString_(NSString
   JavaLangStringBuffer *anditionStr = create_JavaLangStringBuffer_initWithNSString_(str);
   JavaUtilRegexMatcher *matcher = [((JavaUtilRegexPattern *) nil_chk(ComMdimensionJchronicNumerizerNumerizer_ANDITION_PATTERN)) matcherWithJavaLangCharSequence:anditionStr];
   while ([((JavaUtilRegexMatcher *) nil_chk(matcher)) find]) {
-    if ([((NSString *) nil_chk([matcher groupWithInt:2])) equalsIgnoreCase:@" and "] || ((jint) [((NSString *) nil_chk([matcher groupWithInt:1])) length]) > ((jint) [((NSString *) nil_chk([matcher groupWithInt:3])) length])) {
-      [anditionStr replaceWithInt:[matcher start] withInt:[matcher end] withNSString:NSString_valueOfInt_(JavaLangInteger_parseIntWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) trim]) + JavaLangInteger_parseIntWithNSString_([((NSString *) nil_chk([matcher groupWithInt:3])) trim]))];
+    if ([((NSString *) nil_chk([matcher groupWithInt:2])) java_equalsIgnoreCase:@" and "] || [((NSString *) nil_chk([matcher groupWithInt:1])) java_length] > [((NSString *) nil_chk([matcher groupWithInt:3])) java_length]) {
+      [anditionStr replaceWithInt:[matcher start] withInt:[matcher end] withNSString:NSString_java_valueOfInt_(JavaLangInteger_parseIntWithNSString_([((NSString *) nil_chk([matcher groupWithInt:1])) java_trim]) + JavaLangInteger_parseIntWithNSString_([((NSString *) nil_chk([matcher groupWithInt:3])) java_trim]))];
       matcher = [ComMdimensionJchronicNumerizerNumerizer_ANDITION_PATTERN matcherWithJavaLangCharSequence:anditionStr];
     }
   }
   return [anditionStr description];
-}
-
-void ComMdimensionJchronicNumerizerNumerizer_init(ComMdimensionJchronicNumerizerNumerizer *self) {
-  NSObject_init(self);
-}
-
-ComMdimensionJchronicNumerizerNumerizer *new_ComMdimensionJchronicNumerizerNumerizer_init() {
-  J2OBJC_NEW_IMPL(ComMdimensionJchronicNumerizerNumerizer, init)
-}
-
-ComMdimensionJchronicNumerizerNumerizer *create_ComMdimensionJchronicNumerizerNumerizer_init() {
-  J2OBJC_CREATE_IMPL(ComMdimensionJchronicNumerizerNumerizer, init)
 }
 
 J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComMdimensionJchronicNumerizerNumerizer)

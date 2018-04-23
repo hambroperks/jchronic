@@ -11,17 +11,17 @@
 
 @implementation ComMdimensionJchronicHandlersDummyHandler
 
-- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
-                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
-  return nil;
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComMdimensionJchronicHandlersDummyHandler_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
+                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
+  return nil;
+}
 
 @end
 

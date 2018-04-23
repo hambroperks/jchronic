@@ -12,6 +12,13 @@
 
 @implementation ComMdimensionJchronicRepeatersRepeaterSeason
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterSeason_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   @throw create_JavaLangIllegalStateException_initWithNSString_(@"Not implemented.");
 }
@@ -33,13 +40,6 @@
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-season");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterSeason_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

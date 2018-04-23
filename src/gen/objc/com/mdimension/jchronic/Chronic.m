@@ -22,15 +22,16 @@
 #include "java/io/PrintStream.h"
 #include "java/lang/RuntimeException.h"
 #include "java/lang/System.h"
+#include "java/lang/Throwable.h"
 #include "java/lang/reflect/Method.h"
 #include "java/util/LinkedList.h"
 #include "java/util/List.h"
 
 __attribute__((unused)) static void ComMdimensionJchronicChronic_init(ComMdimensionJchronicChronic *self);
 
-__attribute__((unused)) static ComMdimensionJchronicChronic *new_ComMdimensionJchronicChronic_init() NS_RETURNS_RETAINED;
+__attribute__((unused)) static ComMdimensionJchronicChronic *new_ComMdimensionJchronicChronic_init(void) NS_RETURNS_RETAINED;
 
-__attribute__((unused)) static ComMdimensionJchronicChronic *create_ComMdimensionJchronicChronic_init();
+__attribute__((unused)) static ComMdimensionJchronicChronic *create_ComMdimensionJchronicChronic_init(void);
 
 NSString *ComMdimensionJchronicChronic_VERSION = @"0.2.3";
 
@@ -92,10 +93,10 @@ ComMdimensionJchronicUtilsSpan *ComMdimensionJchronicChronic_parseWithNSString_w
   [optionScannerClasses addWithId:ComMdimensionJchronicRepeatersRepeater_class_()];
   for (IOSClass * __strong optionScannerClass in optionScannerClasses) {
     @try {
-      tokens = (id<JavaUtilList>) cast_check([((JavaLangReflectMethod *) nil_chk([((IOSClass *) nil_chk(optionScannerClass)) getMethod:@"scan" parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ JavaUtilList_class_(), ComMdimensionJchronicOptions_class_() } count:2 type:IOSClass_class_()]])) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ tokens, options } count:2 type:NSObject_class_()]], JavaUtilList_class_());
+      tokens = (id<JavaUtilList>) cast_check([((JavaLangReflectMethod *) nil_chk(([((IOSClass *) nil_chk(optionScannerClass)) getMethod:@"scan" parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ JavaUtilList_class_(), ComMdimensionJchronicOptions_class_() } count:2 type:IOSClass_class_()]]))) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ tokens, options } count:2 type:NSObject_class_()]], JavaUtilList_class_());
     }
-    @catch (NSException *e) {
-      @throw create_JavaLangRuntimeException_initWithNSString_withNSException_(@"Failed to scan tokens.", e);
+    @catch (JavaLangThrowable *e) {
+      @throw create_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_(@"Failed to scan tokens.", e);
     }
   }
   id<JavaUtilList> scannerClasses = create_JavaUtilLinkedList_init();
@@ -107,10 +108,10 @@ ComMdimensionJchronicUtilsSpan *ComMdimensionJchronicChronic_parseWithNSString_w
   [scannerClasses addWithId:ComMdimensionJchronicTagsTimeZone_class_()];
   for (IOSClass * __strong scannerClass in scannerClasses) {
     @try {
-      tokens = (id<JavaUtilList>) cast_check([((JavaLangReflectMethod *) nil_chk([((IOSClass *) nil_chk(scannerClass)) getMethod:@"scan" parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ JavaUtilList_class_(), ComMdimensionJchronicOptions_class_() } count:2 type:IOSClass_class_()]])) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ tokens, options } count:2 type:NSObject_class_()]], JavaUtilList_class_());
+      tokens = (id<JavaUtilList>) cast_check([((JavaLangReflectMethod *) nil_chk(([((IOSClass *) nil_chk(scannerClass)) getMethod:@"scan" parameterTypes:[IOSObjectArray arrayWithObjects:(id[]){ JavaUtilList_class_(), ComMdimensionJchronicOptions_class_() } count:2 type:IOSClass_class_()]]))) invokeWithId:nil withNSObjectArray:[IOSObjectArray arrayWithObjects:(id[]){ tokens, options } count:2 type:NSObject_class_()]], JavaUtilList_class_());
     }
-    @catch (NSException *e) {
-      @throw create_JavaLangRuntimeException_initWithNSString_withNSException_(@"Failed to scan tokens.", e);
+    @catch (JavaLangThrowable *e) {
+      @throw create_JavaLangRuntimeException_initWithNSString_withJavaLangThrowable_(@"Failed to scan tokens.", e);
     }
   }
   id<JavaUtilList> taggedTokens = create_JavaUtilLinkedList_init();
@@ -134,23 +135,23 @@ NSString *ComMdimensionJchronicChronic_preNormalizeWithNSString_(NSString *text)
   ComMdimensionJchronicChronic_initialize();
   NSString *normalizedText = [((NSString *) nil_chk(text)) lowercaseString];
   normalizedText = ComMdimensionJchronicChronic_numericizeNumbersWithNSString_(normalizedText);
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"['\"\\.]" withReplacement:@""];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"([/\\-,@])" withReplacement:@" $1 "];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\btoday\\b" withReplacement:@"this day"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\btomm?orr?ow\\b" withReplacement:@"next day"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\byesterday\\b" withReplacement:@"last day"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\bnoon\\b" withReplacement:@"12:00"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\bmidnight\\b" withReplacement:@"24:00"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\bbefore now\\b" withReplacement:@"past"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\bnow\\b" withReplacement:@"this second"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\b(ago|before)\\b" withReplacement:@"past"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\bthis past\\b" withReplacement:@"last"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\bthis last\\b" withReplacement:@"last"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\b(?:in|during) the (morning)\\b" withReplacement:@"$1"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\b(?:in the|during the|at) (afternoon|evening|night)\\b" withReplacement:@"$1"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\btonight\\b" withReplacement:@"this night"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"(?=\\w)([ap]m|oclock)\\b" withReplacement:@" $1"];
-  normalizedText = [((NSString *) nil_chk(normalizedText)) replaceAll:@"\\b(hence|after|from)\\b" withReplacement:@"future"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"['\"\\.]" withReplacement:@""];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"([/\\-,@])" withReplacement:@" $1 "];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\btoday\\b" withReplacement:@"this day"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\btomm?orr?ow\\b" withReplacement:@"next day"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\byesterday\\b" withReplacement:@"last day"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\bnoon\\b" withReplacement:@"12:00"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\bmidnight\\b" withReplacement:@"24:00"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\bbefore now\\b" withReplacement:@"past"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\bnow\\b" withReplacement:@"this second"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\b(ago|before)\\b" withReplacement:@"past"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\bthis past\\b" withReplacement:@"last"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\bthis last\\b" withReplacement:@"last"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\b(?:in|during) the (morning)\\b" withReplacement:@"$1"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\b(?:in the|during the|at) (afternoon|evening|night)\\b" withReplacement:@"$1"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\btonight\\b" withReplacement:@"this night"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"(?=\\w)([ap]m|oclock)\\b" withReplacement:@" $1"];
+  normalizedText = [((NSString *) nil_chk(normalizedText)) java_replaceAll:@"\\b(hence|after|from)\\b" withReplacement:@"future"];
   normalizedText = ComMdimensionJchronicChronic_numericizeOrdinalsWithNSString_(normalizedText);
   return normalizedText;
 }
@@ -167,7 +168,7 @@ NSString *ComMdimensionJchronicChronic_numericizeOrdinalsWithNSString_(NSString 
 
 id<JavaUtilList> ComMdimensionJchronicChronic_baseTokenizeWithNSString_(NSString *text) {
   ComMdimensionJchronicChronic_initialize();
-  IOSObjectArray *words = [((NSString *) nil_chk(text)) split:@" "];
+  IOSObjectArray *words = [((NSString *) nil_chk(text)) java_split:@" "];
   id<JavaUtilList> tokens = create_JavaUtilLinkedList_init();
   {
     IOSObjectArray *a__ = words;

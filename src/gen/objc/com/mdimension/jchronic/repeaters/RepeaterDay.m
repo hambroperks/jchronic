@@ -23,6 +23,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterDay, _currentDayStart_
 
 @implementation ComMdimensionJchronicRepeatersRepeaterDay
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterDay_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   if (_currentDayStart_ == nil) {
     JreStrongAssign(&_currentDayStart_, ComMdimensionJchronicUtilsTime_ymdWithJavaUtilCalendar_([self getNow]));
@@ -67,13 +74,6 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterDay, _currentDayStart_
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-day");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterDay_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_currentDayStart_);

@@ -23,6 +23,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterMinute, _currentMinute
 
 @implementation ComMdimensionJchronicRepeatersRepeaterMinute
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterMinute_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   if (_currentMinuteStart_ == nil) {
     if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) {
@@ -77,13 +84,6 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterMinute, _currentMinute
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-minute");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterMinute_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_currentMinuteStart_);

@@ -24,11 +24,18 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterWeek, _currentWeekStar
 
 @implementation ComMdimensionJchronicRepeatersRepeaterWeek
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterWeek_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   if (_currentWeekStart_ == nil) {
     if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) {
       ComMdimensionJchronicRepeatersRepeaterDayName *sundayRepeater = create_ComMdimensionJchronicRepeatersRepeaterDayName_initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName_(JreLoadEnum(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, SUNDAY));
-      [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) clone], [JavaUtilCalendar class])];
+      [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) java_clone], [JavaUtilCalendar class])];
       ComMdimensionJchronicUtilsSpan *nextSundaySpan = [sundayRepeater nextSpanWithComMdimensionJchronicTagsPointer_PointerType:JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)];
       JreStrongAssign(&_currentWeekStart_, [((ComMdimensionJchronicUtilsSpan *) nil_chk(nextSundaySpan)) getBeginCalendar]);
     }
@@ -57,7 +64,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterWeek, _currentWeekStar
   if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) {
     thisWeekStart = ComMdimensionJchronicUtilsTime_cloneAndAddWithJavaUtilCalendar_withInt_withLong_(ComMdimensionJchronicUtilsTime_ymdhWithJavaUtilCalendar_([self getNow]), JavaUtilCalendar_HOUR, 1);
     ComMdimensionJchronicRepeatersRepeaterDayName *sundayRepeater = create_ComMdimensionJchronicRepeatersRepeaterDayName_initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName_(JreLoadEnum(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, SUNDAY));
-    [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) clone], [JavaUtilCalendar class])];
+    [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) java_clone], [JavaUtilCalendar class])];
     ComMdimensionJchronicUtilsSpan *thisSundaySpan = [sundayRepeater thisSpanWithComMdimensionJchronicTagsPointer_PointerType:JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)];
     thisWeekEnd = [((ComMdimensionJchronicUtilsSpan *) nil_chk(thisSundaySpan)) getBeginCalendar];
     thisWeekSpan = create_ComMdimensionJchronicUtilsSpan_initWithJavaUtilCalendar_withJavaUtilCalendar_(thisWeekStart, thisWeekEnd);
@@ -65,14 +72,14 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterWeek, _currentWeekStar
   else if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, PAST)) {
     thisWeekEnd = ComMdimensionJchronicUtilsTime_ymdhWithJavaUtilCalendar_([self getNow]);
     ComMdimensionJchronicRepeatersRepeaterDayName *sundayRepeater = create_ComMdimensionJchronicRepeatersRepeaterDayName_initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName_(JreLoadEnum(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, SUNDAY));
-    [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) clone], [JavaUtilCalendar class])];
+    [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) java_clone], [JavaUtilCalendar class])];
     ComMdimensionJchronicUtilsSpan *lastSundaySpan = [sundayRepeater nextSpanWithComMdimensionJchronicTagsPointer_PointerType:JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, PAST)];
     thisWeekStart = [((ComMdimensionJchronicUtilsSpan *) nil_chk(lastSundaySpan)) getBeginCalendar];
     thisWeekSpan = create_ComMdimensionJchronicUtilsSpan_initWithJavaUtilCalendar_withJavaUtilCalendar_(thisWeekStart, thisWeekEnd);
   }
   else if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, NONE)) {
     ComMdimensionJchronicRepeatersRepeaterDayName *sundayRepeater = create_ComMdimensionJchronicRepeatersRepeaterDayName_initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName_(JreLoadEnum(ComMdimensionJchronicRepeatersRepeaterDayName_DayName, SUNDAY));
-    [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) clone], [JavaUtilCalendar class])];
+    [sundayRepeater setStartWithJavaUtilCalendar:(JavaUtilCalendar *) cast_chk([((JavaUtilCalendar *) nil_chk([self getNow])) java_clone], [JavaUtilCalendar class])];
     ComMdimensionJchronicUtilsSpan *lastSundaySpan = [sundayRepeater nextSpanWithComMdimensionJchronicTagsPointer_PointerType:JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, PAST)];
     thisWeekStart = [((ComMdimensionJchronicUtilsSpan *) nil_chk(lastSundaySpan)) getBeginCalendar];
     thisWeekEnd = ComMdimensionJchronicUtilsTime_cloneAndAddWithJavaUtilCalendar_withInt_withLong_(thisWeekStart, JavaUtilCalendar_DAY_OF_MONTH, ComMdimensionJchronicRepeatersRepeaterWeek_WEEK_DAYS);
@@ -98,13 +105,6 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterWeek, _currentWeekStar
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-week");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterWeek_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_currentWeekStart_);

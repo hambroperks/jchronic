@@ -22,6 +22,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterSecond, _secondStart_,
 
 @implementation ComMdimensionJchronicRepeatersRepeaterSecond
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterSecond_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   jint direction = (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) ? 1 : -1;
   if (_secondStart_ == nil) {
@@ -51,13 +58,6 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterSecond, _secondStart_,
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-second");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterSecond_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_secondStart_);

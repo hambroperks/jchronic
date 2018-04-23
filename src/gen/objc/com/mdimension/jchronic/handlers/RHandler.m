@@ -12,18 +12,18 @@
 
 @implementation ComMdimensionJchronicHandlersRHandler
 
-- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
-                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
-  id<JavaUtilList> ddTokens = ComMdimensionJchronicHandlersHandler_dealiasAndDisambiguateTimesWithJavaUtilList_withComMdimensionJchronicOptions_(tokens, options);
-  return ComMdimensionJchronicHandlersHandler_getAnchorWithJavaUtilList_withComMdimensionJchronicOptions_(ddTokens, options);
-}
-
 J2OBJC_IGNORE_DESIGNATED_BEGIN
 - (instancetype)init {
   ComMdimensionJchronicHandlersRHandler_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
+
+- (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
+                          withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
+  id<JavaUtilList> ddTokens = ComMdimensionJchronicHandlersHandler_dealiasAndDisambiguateTimesWithJavaUtilList_withComMdimensionJchronicOptions_(tokens, options);
+  return ComMdimensionJchronicHandlersHandler_getAnchorWithJavaUtilList_withComMdimensionJchronicOptions_(ddTokens, options);
+}
 
 @end
 

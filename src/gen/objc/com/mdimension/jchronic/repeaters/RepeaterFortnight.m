@@ -26,6 +26,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterFortnight, _currentFor
 
 @implementation ComMdimensionJchronicRepeatersRepeaterFortnight
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicRepeatersRepeaterFortnight_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)_nextSpanWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)pointer {
   if (_currentFortnightStart_ == nil) {
     if (pointer == JreLoadEnum(ComMdimensionJchronicTagsPointer_PointerType, FUTURE)) {
@@ -96,13 +103,6 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterFortnight, _currentFor
 - (NSString *)description {
   return JreStrcat("$$", [super description], @"-fortnight");
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicRepeatersRepeaterFortnight_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 - (void)dealloc {
   RELEASE_(_currentFortnightStart_);

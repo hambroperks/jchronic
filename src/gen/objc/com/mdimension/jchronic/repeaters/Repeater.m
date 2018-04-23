@@ -41,7 +41,6 @@
 }
 
 - (jint)compareToWithId:(ComMdimensionJchronicRepeatersRepeater *)other {
-  cast_chk(other, [ComMdimensionJchronicRepeatersRepeater class]);
   return [JavaLangInteger_valueOfWithInt_([self getWidth]) compareToWithId:JavaLangInteger_valueOfWithInt_([((ComMdimensionJchronicRepeatersRepeater *) nil_chk(other)) getWidth])];
 }
 

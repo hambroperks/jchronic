@@ -23,10 +23,9 @@
 @class JavaUtilCalendar;
 
 /*!
- @brief A Span represents a range of time.
- Since this class extends
- Range, you can use #begin and #end to get the beginning and
- ending times of the span (they will be of class Time)
+ @brief A Span represents a range of time.Since this class extends
+  Range, you can use #begin and #end to get the beginning and
+  ending times of the span (they will be of class Time)
  */
 @interface ComMdimensionJchronicUtilsSpan : ComMdimensionJchronicUtilsRange
 
@@ -44,7 +43,7 @@
 
 /*!
  @brief Add a number of seconds to this span, returning the 
- resulting Span
+  resulting Span
  */
 - (ComMdimensionJchronicUtilsSpan *)addWithLong:(jlong)seconds;
 
@@ -54,7 +53,7 @@
 
 /*!
  @brief Subtract a number of seconds to this span, returning the 
- resulting Span
+  resulting Span
  */
 - (ComMdimensionJchronicUtilsSpan *)subtractWithLong:(jlong)seconds;
 

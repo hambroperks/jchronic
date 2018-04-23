@@ -14,6 +14,13 @@
 
 @implementation ComMdimensionJchronicHandlersRGRHandler
 
+J2OBJC_IGNORE_DESIGNATED_BEGIN
+- (instancetype)init {
+  ComMdimensionJchronicHandlersRGRHandler_init(self);
+  return self;
+}
+J2OBJC_IGNORE_DESIGNATED_END
+
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options {
   id<JavaUtilList> newTokens = create_JavaUtilLinkedList_init();
@@ -22,13 +29,6 @@
   [newTokens addWithId:[tokens getWithInt:2]];
   return [super handleWithJavaUtilList:newTokens withComMdimensionJchronicOptions:options];
 }
-
-J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
-  ComMdimensionJchronicHandlersRGRHandler_init(self);
-  return self;
-}
-J2OBJC_IGNORE_DESIGNATED_END
 
 @end
 

@@ -38,33 +38,33 @@
 
 J2OBJC_STATIC_INIT(ComMdimensionJchronicNumerizerNumerizer)
 
-inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_get_DIRECT_NUMS();
+inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_get_DIRECT_NUMS(void);
 inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_set_DIRECT_NUMS(IOSObjectArray *value);
 /*! INTERNAL ONLY - Use accessor function from above. */
 FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_DIRECT_NUMS;
 J2OBJC_STATIC_FIELD_OBJ(ComMdimensionJchronicNumerizerNumerizer, DIRECT_NUMS, IOSObjectArray *)
 
-inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_get_TEN_PREFIXES();
+inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_get_TEN_PREFIXES(void);
 inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_set_TEN_PREFIXES(IOSObjectArray *value);
 /*! INTERNAL ONLY - Use accessor function from above. */
 FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_TEN_PREFIXES;
 J2OBJC_STATIC_FIELD_OBJ(ComMdimensionJchronicNumerizerNumerizer, TEN_PREFIXES, IOSObjectArray *)
 
-inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_get_BIG_PREFIXES();
+inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_get_BIG_PREFIXES(void);
 inline IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_set_BIG_PREFIXES(IOSObjectArray *value);
 /*! INTERNAL ONLY - Use accessor function from above. */
 FOUNDATION_EXPORT IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_BIG_PREFIXES;
 J2OBJC_STATIC_FIELD_OBJ(ComMdimensionJchronicNumerizerNumerizer, BIG_PREFIXES, IOSObjectArray *)
 
+FOUNDATION_EXPORT void ComMdimensionJchronicNumerizerNumerizer_init(ComMdimensionJchronicNumerizerNumerizer *self);
+
+FOUNDATION_EXPORT ComMdimensionJchronicNumerizerNumerizer *new_ComMdimensionJchronicNumerizerNumerizer_init(void) NS_RETURNS_RETAINED;
+
+FOUNDATION_EXPORT ComMdimensionJchronicNumerizerNumerizer *create_ComMdimensionJchronicNumerizerNumerizer_init(void);
+
 FOUNDATION_EXPORT NSString *ComMdimensionJchronicNumerizerNumerizer_numerizeWithNSString_(NSString *str);
 
 FOUNDATION_EXPORT NSString *ComMdimensionJchronicNumerizerNumerizer_anditionWithNSString_(NSString *str);
-
-FOUNDATION_EXPORT void ComMdimensionJchronicNumerizerNumerizer_init(ComMdimensionJchronicNumerizerNumerizer *self);
-
-FOUNDATION_EXPORT ComMdimensionJchronicNumerizerNumerizer *new_ComMdimensionJchronicNumerizerNumerizer_init() NS_RETURNS_RETAINED;
-
-FOUNDATION_EXPORT ComMdimensionJchronicNumerizerNumerizer *create_ComMdimensionJchronicNumerizerNumerizer_init();
 
 J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer)
 
@@ -85,6 +85,10 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer)
 - (JavaUtilRegexPattern *)getName;
 
 - (NSString *)getNumber;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
 
 @end
 
@@ -116,6 +120,10 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_DirectNum)
 
 - (jlong)getNumber;
 
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)init NS_UNAVAILABLE;
+
 @end
 
 J2OBJC_EMPTY_STATIC_INIT(ComMdimensionJchronicNumerizerNumerizer_Prefix)
@@ -133,12 +141,19 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_Prefix)
 #if !defined (ComMdimensionJchronicNumerizerNumerizer_TenPrefix_) && (INCLUDE_ALL_ComMdimensionJchronicNumerizerNumerizer || defined(INCLUDE_ComMdimensionJchronicNumerizerNumerizer_TenPrefix))
 #define ComMdimensionJchronicNumerizerNumerizer_TenPrefix_
 
+@class JavaUtilRegexPattern;
+
 @interface ComMdimensionJchronicNumerizerNumerizer_TenPrefix : ComMdimensionJchronicNumerizerNumerizer_Prefix
 
 #pragma mark Public
 
 - (instancetype)initWithNSString:(NSString *)name
                         withLong:(jlong)number;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)arg0
+                                    withLong:(jlong)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -157,12 +172,19 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_TenPrefix)
 #if !defined (ComMdimensionJchronicNumerizerNumerizer_BigPrefix_) && (INCLUDE_ALL_ComMdimensionJchronicNumerizerNumerizer || defined(INCLUDE_ComMdimensionJchronicNumerizerNumerizer_BigPrefix))
 #define ComMdimensionJchronicNumerizerNumerizer_BigPrefix_
 
+@class JavaUtilRegexPattern;
+
 @interface ComMdimensionJchronicNumerizerNumerizer_BigPrefix : ComMdimensionJchronicNumerizerNumerizer_Prefix
 
 #pragma mark Public
 
 - (instancetype)initWithNSString:(NSString *)name
                         withLong:(jlong)number;
+
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)arg0
+                                    withLong:(jlong)arg1 NS_UNAVAILABLE;
 
 @end
 

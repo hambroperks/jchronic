@@ -38,20 +38,24 @@
 
 - (NSString *)description;
 
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+
 @end
 
 J2OBJC_STATIC_INIT(ComMdimensionJchronicTagsTimeZone)
 
-inline id ComMdimensionJchronicTagsTimeZone_get_TZ();
+inline id ComMdimensionJchronicTagsTimeZone_get_TZ(void);
 /*! INTERNAL ONLY - Use accessor function from above. */
 FOUNDATION_EXPORT id ComMdimensionJchronicTagsTimeZone_TZ;
 J2OBJC_STATIC_FIELD_OBJ_FINAL(ComMdimensionJchronicTagsTimeZone, TZ, id)
 
 FOUNDATION_EXPORT void ComMdimensionJchronicTagsTimeZone_init(ComMdimensionJchronicTagsTimeZone *self);
 
-FOUNDATION_EXPORT ComMdimensionJchronicTagsTimeZone *new_ComMdimensionJchronicTagsTimeZone_init() NS_RETURNS_RETAINED;
+FOUNDATION_EXPORT ComMdimensionJchronicTagsTimeZone *new_ComMdimensionJchronicTagsTimeZone_init(void) NS_RETURNS_RETAINED;
 
-FOUNDATION_EXPORT ComMdimensionJchronicTagsTimeZone *create_ComMdimensionJchronicTagsTimeZone_init();
+FOUNDATION_EXPORT ComMdimensionJchronicTagsTimeZone *create_ComMdimensionJchronicTagsTimeZone_init(void);
 
 FOUNDATION_EXPORT id<JavaUtilList> ComMdimensionJchronicTagsTimeZone_scanWithJavaUtilList_withComMdimensionJchronicOptions_(id<JavaUtilList> tokens, ComMdimensionJchronicOptions *options);
 

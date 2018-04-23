@@ -37,6 +37,10 @@
 
 - (ComMdimensionJchronicUtilsRange *)createRangeWithId:(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *)type;
 
+// Disallowed inherited constructors, do not use.
+
+- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+
 @end
 
 J2OBJC_STATIC_INIT(ComMdimensionJchronicRepeatersEnumRepeaterDayPortion)
