@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name             = "jChronic"
-  s.version          = '0.2.7-SNAPSHOT'
+  s.version          = '0.2.6.J2ObjC2.0.5'
   s.author           = { "Marcus Smith" => "marcus@laundrapp.com" }
-  s.source           = { :git => "https://github.com/hambroperks/jchronic.git", :tag => "0.2.7-SNAPSHOT-J2ObjC1.2" }
+  s.source           = { :git => "https://github.com/hambroperks/jchronic.git", :tag => "0.2.6.J2ObjC2.0.5" }
   s.summary 	       = "A natural language date parser in Java. Originally written by Mike Schrag as a direct port of Ruby's chronic. Converted to Objective-C using J2ObjC."
   s.homepage         = "https://github.com/samtingleff/jchronic"
   s.license          = { :type => 'Apache License, Version 2.0', :file => 'LICENSE.txt' }
