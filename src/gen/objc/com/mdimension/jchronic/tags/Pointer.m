@@ -38,7 +38,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicTagsPointer)
 
 @implementation ComMdimensionJchronicTagsPointer
 
-- (instancetype)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)type {
   ComMdimensionJchronicTagsPointer_initWithComMdimensionJchronicTagsPointer_PointerType_(self, type);
   return self;
 }
@@ -131,7 +131,7 @@ ComMdimensionJchronicTagsPointer_PointerType *ComMdimensionJchronicTagsPointer_P
       @"PAST", @"FUTURE", @"NONE",
     };
     for (jint i = 0; i < 3; i++) {
-      (ComMdimensionJchronicTagsPointer_PointerType_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicTagsPointer_PointerType_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicTagsPointer_PointerType_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicTagsPointer_PointerType)

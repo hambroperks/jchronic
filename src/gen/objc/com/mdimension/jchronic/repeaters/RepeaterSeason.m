@@ -13,7 +13,7 @@
 @implementation ComMdimensionJchronicRepeatersRepeaterSeason
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterSeason_init(self);
   return self;
 }

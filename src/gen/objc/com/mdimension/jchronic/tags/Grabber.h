@@ -34,7 +34,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComMdimensionJchronicTagsGrabber_Relative:(ComMdimensionJchronicTagsGrabber_Relative *)type;
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsGrabber_Relative:(ComMdimensionJchronicTagsGrabber_Relative *)type;
 
 - (ComMdimensionJchronicTagsGrabber_Relative *)getType;
 
@@ -48,7 +48,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 

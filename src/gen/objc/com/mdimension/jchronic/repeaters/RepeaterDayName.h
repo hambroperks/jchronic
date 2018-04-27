@@ -34,7 +34,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName:(ComMdimensionJchronicRepeatersRepeaterDayName_DayName *)type;
+- (instancetype __nonnull)initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName:(ComMdimensionJchronicRepeatersRepeaterDayName_DayName *)type;
 
 - (ComMdimensionJchronicUtilsSpan *)getOffsetWithComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)span
                                                                         withInt:(jint)amount
@@ -56,7 +56,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 

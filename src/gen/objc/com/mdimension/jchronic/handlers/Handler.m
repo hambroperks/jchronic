@@ -89,15 +89,15 @@ __attribute__((unused)) static void ComMdimensionJchronicHandlersHandler_Handler
 
 @implementation ComMdimensionJchronicHandlersHandler
 
-- (instancetype)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
-         withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns {
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
+                   withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns {
   ComMdimensionJchronicHandlersHandler_initWithComMdimensionJchronicHandlersIHandler_withComMdimensionJchronicHandlersHandlerPatternArray_(self, handler, patterns);
   return self;
 }
 
-- (instancetype)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
-                                                  withBoolean:(jboolean)compatible
-         withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns {
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
+                                                            withBoolean:(jboolean)compatible
+                   withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns {
   ComMdimensionJchronicHandlersHandler_initWithComMdimensionJchronicHandlersIHandler_withBoolean_withComMdimensionJchronicHandlersHandlerPatternArray_(self, handler, compatible, patterns);
   return self;
 }
@@ -496,7 +496,7 @@ ComMdimensionJchronicHandlersHandler_HandlerType *ComMdimensionJchronicHandlersH
       @"TIME", @"DATE", @"ANCHOR", @"ARROW", @"NARROW",
     };
     for (jint i = 0; i < 5; i++) {
-      (ComMdimensionJchronicHandlersHandler_HandlerType_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicHandlersHandler_HandlerType_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicHandlersHandler_HandlerType_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicHandlersHandler_HandlerType)

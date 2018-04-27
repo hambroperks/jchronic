@@ -13,21 +13,21 @@
 
 @implementation ComMdimensionJchronicUtilsSpan
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
-                                 withInt:(jint)field
-                                withLong:(jlong)amount {
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
+                                           withInt:(jint)field
+                                          withLong:(jlong)amount {
   ComMdimensionJchronicUtilsSpan_initWithJavaUtilCalendar_withInt_withLong_(self, begin, field, amount);
   return self;
 }
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
-                    withJavaUtilCalendar:(JavaUtilCalendar *)end {
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
+                              withJavaUtilCalendar:(JavaUtilCalendar *)end {
   ComMdimensionJchronicUtilsSpan_initWithJavaUtilCalendar_withJavaUtilCalendar_(self, begin, end);
   return self;
 }
 
-- (instancetype)initWithLong:(jlong)begin
-                    withLong:(jlong)end {
+- (instancetype __nonnull)initWithLong:(jlong)begin
+                              withLong:(jlong)end {
   ComMdimensionJchronicUtilsSpan_initWithLong_withLong_(self, begin, end);
   return self;
 }

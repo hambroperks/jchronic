@@ -16,8 +16,8 @@
 
 @implementation ComMdimensionJchronicUtilsTick
 
-- (instancetype)initWithInt:(jint)time
-                withBoolean:(jboolean)ambiguous {
+- (instancetype __nonnull)initWithInt:(jint)time
+                          withBoolean:(jboolean)ambiguous {
   ComMdimensionJchronicUtilsTick_initWithInt_withBoolean_(self, time, ambiguous);
   return self;
 }

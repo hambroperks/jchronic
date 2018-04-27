@@ -26,7 +26,7 @@ id ComMdimensionJchronicTagsTimeZone_TZ;
 @implementation ComMdimensionJchronicTagsTimeZone
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicTagsTimeZone_init(self);
   return self;
 }

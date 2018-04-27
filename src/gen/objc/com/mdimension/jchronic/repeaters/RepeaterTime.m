@@ -42,7 +42,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicRepeatersRepeaterTime)
 
 @implementation ComMdimensionJchronicRepeatersRepeaterTime
 
-- (instancetype)initWithNSString:(NSString *)time {
+- (instancetype __nonnull)initWithNSString:(NSString *)time {
   ComMdimensionJchronicRepeatersRepeaterTime_initWithNSString_(self, time);
   return self;
 }

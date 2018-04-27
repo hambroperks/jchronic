@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicUtilsTime
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicUtilsTime_) && (INCLUDE_ALL_ComMdimensionJchronicUtilsTime || defined(INCLUDE_ComMdimensionJchronicUtilsTime))
 #define ComMdimensionJchronicUtilsTime_
 
@@ -22,7 +27,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 + (JavaUtilCalendar *)cloneAndAddWithJavaUtilCalendar:(JavaUtilCalendar *)basis
                                               withInt:(jint)field
@@ -124,4 +129,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicUtilsTime)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicUtilsTime")

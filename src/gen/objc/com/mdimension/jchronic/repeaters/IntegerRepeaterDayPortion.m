@@ -13,7 +13,7 @@
 
 @implementation ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type {
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type {
   ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion_initWithJavaLangInteger_(self, type);
   return self;
 }

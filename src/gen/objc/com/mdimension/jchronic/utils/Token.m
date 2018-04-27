@@ -24,7 +24,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicUtilsToken, _tags_, id<JavaUtilList>)
 
 @implementation ComMdimensionJchronicUtilsToken
 
-- (instancetype)initWithNSString:(NSString *)word {
+- (instancetype __nonnull)initWithNSString:(NSString *)word {
   ComMdimensionJchronicUtilsToken_initWithNSString_(self, word);
   return self;
 }

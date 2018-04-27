@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsTag
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsTag_) && (INCLUDE_ALL_ComMdimensionJchronicTagsTag || defined(INCLUDE_ComMdimensionJchronicTagsTag))
 #define ComMdimensionJchronicTagsTag_
 
@@ -26,7 +31,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithId:(id)type;
+- (instancetype __nonnull)initWithId:(id)type;
 
 - (JavaUtilCalendar *)getNow;
 
@@ -38,7 +43,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype __nonnull)init NS_UNAVAILABLE;
 
 @end
 
@@ -54,4 +59,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsTag)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsTag")

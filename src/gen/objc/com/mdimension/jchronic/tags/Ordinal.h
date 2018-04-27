@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsOrdinal
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsOrdinal_) && (INCLUDE_ALL_ComMdimensionJchronicTagsOrdinal || defined(INCLUDE_ComMdimensionJchronicTagsOrdinal))
 #define ComMdimensionJchronicTagsOrdinal_
 
@@ -30,7 +35,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type;
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type;
 
 - (JavaLangInteger *)getType;
 
@@ -44,7 +49,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -70,4 +75,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsOrdinal)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsOrdinal")

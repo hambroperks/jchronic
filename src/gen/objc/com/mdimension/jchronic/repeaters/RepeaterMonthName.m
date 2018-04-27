@@ -90,7 +90,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicRepeatersRepeaterMonthName)
 
 @implementation ComMdimensionJchronicRepeatersRepeaterMonthName
 
-- (instancetype)initWithComMdimensionJchronicRepeatersRepeaterMonthName_MonthName:(ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicRepeatersRepeaterMonthName_MonthName:(ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName *)type {
   ComMdimensionJchronicRepeatersRepeaterMonthName_initWithComMdimensionJchronicRepeatersRepeaterMonthName_MonthName_(self, type);
   return self;
 }
@@ -266,7 +266,7 @@ ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName *ComMdimensionJchronic
       @"_ZERO_MONTH", @"JANUARY", @"FEBRUARY", @"MARCH", @"APRIL", @"MAY", @"JUNE", @"JULY", @"AUGUST", @"SEPTEMBER", @"OCTOBER", @"NOVEMBER", @"DECEMBER",
     };
     for (jint i = 0; i < 13; i++) {
-      (ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName)

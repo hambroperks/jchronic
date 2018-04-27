@@ -15,7 +15,7 @@
 
 @implementation ComMdimensionJchronicHandlersHandlerPattern
 
-- (instancetype)initWithBoolean:(jboolean)optional {
+- (instancetype __nonnull)initWithBoolean:(jboolean)optional {
   ComMdimensionJchronicHandlersHandlerPattern_initWithBoolean_(self, optional);
   return self;
 }

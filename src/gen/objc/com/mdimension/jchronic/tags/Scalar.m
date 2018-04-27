@@ -31,7 +31,7 @@ id<JavaUtilSet> ComMdimensionJchronicTagsScalar_TIMES;
 
 @implementation ComMdimensionJchronicTagsScalar
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type {
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type {
   ComMdimensionJchronicTagsScalar_initWithJavaLangInteger_(self, type);
   return self;
 }

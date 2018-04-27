@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicUtilsStringUtils
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicUtilsStringUtils_) && (INCLUDE_ALL_ComMdimensionJchronicUtilsStringUtils || defined(INCLUDE_ComMdimensionJchronicUtilsStringUtils))
 #define ComMdimensionJchronicUtilsStringUtils_
 
@@ -22,7 +27,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 + (JavaLangInteger *)integerValueWithNSString:(NSString *)str;
 
@@ -42,4 +47,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicUtilsStringUtils)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicUtilsStringUtils")

@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersRepeaterDay
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersRepeaterDay_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterDay || defined(INCLUDE_ComMdimensionJchronicRepeatersRepeaterDay))
 #define ComMdimensionJchronicRepeatersRepeaterDay_
 
@@ -27,7 +32,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 - (ComMdimensionJchronicUtilsSpan *)getOffsetWithComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)span
                                                                         withInt:(jint)amount
@@ -61,4 +66,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersRepeaterDay)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterDay")

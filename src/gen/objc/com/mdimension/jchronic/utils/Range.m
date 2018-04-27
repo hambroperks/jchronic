@@ -16,8 +16,8 @@
 
 @implementation ComMdimensionJchronicUtilsRange
 
-- (instancetype)initWithLong:(jlong)begin
-                    withLong:(jlong)end {
+- (instancetype __nonnull)initWithLong:(jlong)begin
+                              withLong:(jlong)end {
   ComMdimensionJchronicUtilsRange_initWithLong_withLong_(self, begin, end);
   return self;
 }

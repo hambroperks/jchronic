@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicOptions
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicOptions_) && (INCLUDE_ALL_ComMdimensionJchronicOptions || defined(INCLUDE_ComMdimensionJchronicOptions))
 #define ComMdimensionJchronicOptions_
 
@@ -23,23 +28,23 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
-- (instancetype)initWithBoolean:(jboolean)guess;
+- (instancetype __nonnull)initWithBoolean:(jboolean)guess;
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)now;
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)now;
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)now
-                             withBoolean:(jboolean)guess;
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)now
+                                       withBoolean:(jboolean)guess;
 
-- (instancetype)initWithInt:(jint)ambiguousTimeRange;
+- (instancetype __nonnull)initWithInt:(jint)ambiguousTimeRange;
 
-- (instancetype)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context;
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context;
 
-- (instancetype)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context
-                                                withJavaUtilCalendar:(JavaUtilCalendar *)now
-                                                         withBoolean:(jboolean)guess
-                                                             withInt:(jint)ambiguousTimeRange;
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context
+                                                          withJavaUtilCalendar:(JavaUtilCalendar *)now
+                                                                   withBoolean:(jboolean)guess
+                                                                       withInt:(jint)ambiguousTimeRange;
 
 - (jint)getAmbiguousTimeRange;
 
@@ -115,4 +120,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicOptions)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicOptions")

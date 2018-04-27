@@ -34,7 +34,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComMdimensionJchronicRepeatersRepeaterMonthName_MonthName:(ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName *)type;
+- (instancetype __nonnull)initWithComMdimensionJchronicRepeatersRepeaterMonthName_MonthName:(ComMdimensionJchronicRepeatersRepeaterMonthName_MonthName *)type;
 
 - (jint)getIndex;
 
@@ -58,7 +58,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 

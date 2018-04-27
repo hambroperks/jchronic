@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicHandlersMDHandler
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicHandlersMDHandler_) && (INCLUDE_ALL_ComMdimensionJchronicHandlersMDHandler || defined(INCLUDE_ComMdimensionJchronicHandlersMDHandler))
 #define ComMdimensionJchronicHandlersMDHandler_
 
@@ -30,7 +35,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 - (ComMdimensionJchronicUtilsSpan *)handleWithComMdimensionJchronicRepeatersRepeater:(ComMdimensionJchronicRepeatersRepeater *)month
                                                     withComMdimensionJchronicTagsTag:(ComMdimensionJchronicTagsTag *)day
@@ -47,4 +52,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicHandlersMDHandler)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicHandlersMDHandler")

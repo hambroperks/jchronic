@@ -21,7 +21,7 @@ JavaUtilRegexPattern *ComMdimensionJchronicTagsScalarYear_YEAR_PATTERN;
 
 @implementation ComMdimensionJchronicTagsScalarYear
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type {
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type {
   ComMdimensionJchronicTagsScalarYear_initWithJavaLangInteger_(self, type);
   return self;
 }

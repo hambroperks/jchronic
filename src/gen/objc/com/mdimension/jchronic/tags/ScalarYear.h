@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsScalarYear
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsScalarYear_) && (INCLUDE_ALL_ComMdimensionJchronicTagsScalarYear || defined(INCLUDE_ComMdimensionJchronicTagsScalarYear))
 #define ComMdimensionJchronicTagsScalarYear_
 
@@ -29,7 +34,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type;
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type;
 
 - (JavaLangInteger *)getType;
 
@@ -60,4 +65,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsScalarYear)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsScalarYear")

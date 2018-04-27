@@ -10,7 +10,7 @@
 @implementation ComMdimensionJchronicUtilsStringUtils
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicUtilsStringUtils_init(self);
   return self;
 }

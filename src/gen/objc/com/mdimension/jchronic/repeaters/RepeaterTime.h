@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersRepeaterTime
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersRepeaterTime_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterTime || defined(INCLUDE_ComMdimensionJchronicRepeatersRepeaterTime))
 #define ComMdimensionJchronicRepeatersRepeaterTime_
 
@@ -31,7 +36,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithNSString:(NSString *)time;
+- (instancetype __nonnull)initWithNSString:(NSString *)time;
 
 - (ComMdimensionJchronicUtilsSpan *)getOffsetWithComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)span
                                                                         withInt:(jint)amount
@@ -55,7 +60,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -73,4 +78,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersRepeaterTime)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterTime")

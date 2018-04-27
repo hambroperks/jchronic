@@ -19,13 +19,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicHandlersHandlerTypePattern, _type_, Com
 
 @implementation ComMdimensionJchronicHandlersHandlerTypePattern
 
-- (instancetype)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type {
   ComMdimensionJchronicHandlersHandlerTypePattern_initWithComMdimensionJchronicHandlersHandler_HandlerType_(self, type);
   return self;
 }
 
-- (instancetype)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type
-                                                             withBoolean:(jboolean)optional {
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type
+                                                                       withBoolean:(jboolean)optional {
   ComMdimensionJchronicHandlersHandlerTypePattern_initWithComMdimensionJchronicHandlersHandler_HandlerType_withBoolean_(self, type, optional);
   return self;
 }

@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicHandlersHandlerTypePattern
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicHandlersHandlerTypePattern_) && (INCLUDE_ALL_ComMdimensionJchronicHandlersHandlerTypePattern || defined(INCLUDE_ComMdimensionJchronicHandlersHandlerTypePattern))
 #define ComMdimensionJchronicHandlersHandlerTypePattern_
 
@@ -26,16 +31,16 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type;
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type;
 
-- (instancetype)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type
-                                                             withBoolean:(jboolean)optional;
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersHandler_HandlerType:(ComMdimensionJchronicHandlersHandler_HandlerType *)type
+                                                                       withBoolean:(jboolean)optional;
 
 - (ComMdimensionJchronicHandlersHandler_HandlerType *)getType;
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithBoolean:(jboolean)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithBoolean:(jboolean)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -57,4 +62,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicHandlersHandlerTypePattern)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicHandlersHandlerTypePattern")

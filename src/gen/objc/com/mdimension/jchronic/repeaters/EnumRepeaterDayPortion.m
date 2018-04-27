@@ -39,7 +39,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicRepeatersEnumRepeaterDayPortion)
 
 @implementation ComMdimensionJchronicRepeatersEnumRepeaterDayPortion
 
-- (instancetype)initWithComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion:(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion:(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *)type {
   ComMdimensionJchronicRepeatersEnumRepeaterDayPortion_initWithComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_(self, type);
   return self;
 }

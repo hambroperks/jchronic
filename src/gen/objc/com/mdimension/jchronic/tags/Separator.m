@@ -23,7 +23,7 @@ __attribute__((unused)) static void ComMdimensionJchronicTagsSeparator_Separator
 
 @implementation ComMdimensionJchronicTagsSeparator
 
-- (instancetype)initWithComMdimensionJchronicTagsSeparator_SeparatorType:(ComMdimensionJchronicTagsSeparator_SeparatorType *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsSeparator_SeparatorType:(ComMdimensionJchronicTagsSeparator_SeparatorType *)type {
   ComMdimensionJchronicTagsSeparator_initWithComMdimensionJchronicTagsSeparator_SeparatorType_(self, type);
   return self;
 }
@@ -101,7 +101,7 @@ ComMdimensionJchronicTagsSeparator_SeparatorType *ComMdimensionJchronicTagsSepar
       @"COMMA", @"DASH", @"SLASH", @"AT", @"NEWLINE", @"IN",
     };
     for (jint i = 0; i < 6; i++) {
-      (ComMdimensionJchronicTagsSeparator_SeparatorType_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicTagsSeparator_SeparatorType_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicTagsSeparator_SeparatorType_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicTagsSeparator_SeparatorType)

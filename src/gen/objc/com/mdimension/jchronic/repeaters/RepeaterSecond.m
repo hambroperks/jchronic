@@ -23,7 +23,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterSecond, _secondStart_,
 @implementation ComMdimensionJchronicRepeatersRepeaterSecond
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterSecond_init(self);
   return self;
 }

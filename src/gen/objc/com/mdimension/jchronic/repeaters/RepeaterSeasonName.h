@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersRepeaterSeasonName
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersRepeaterSeasonName_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterSeasonName || defined(INCLUDE_ComMdimensionJchronicRepeatersRepeaterSeasonName))
 #define ComMdimensionJchronicRepeatersRepeaterSeasonName_
 
@@ -27,7 +32,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithId:(id)type;
+- (instancetype __nonnull)initWithId:(id)type;
 
 - (ComMdimensionJchronicUtilsSpan *)getOffsetWithComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)span
                                                                         withInt:(jint)amount
@@ -57,4 +62,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersRepeaterSeasonName)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeaterSeasonName")

@@ -12,7 +12,7 @@
 
 @implementation ComMdimensionJchronicRepeatersRepeaterSeasonName
 
-- (instancetype)initWithId:(id)type {
+- (instancetype __nonnull)initWithId:(id)type {
   ComMdimensionJchronicRepeatersRepeaterSeasonName_initWithId_(self, type);
   return self;
 }

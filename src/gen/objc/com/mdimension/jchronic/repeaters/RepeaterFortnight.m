@@ -27,7 +27,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterFortnight, _currentFor
 @implementation ComMdimensionJchronicRepeatersRepeaterFortnight
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterFortnight_init(self);
   return self;
 }

@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicHandlersTagPattern
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicHandlersTagPattern_) && (INCLUDE_ALL_ComMdimensionJchronicHandlersTagPattern || defined(INCLUDE_ComMdimensionJchronicHandlersTagPattern))
 #define ComMdimensionJchronicHandlersTagPattern_
 
@@ -26,10 +31,10 @@
 
 #pragma mark Public
 
-- (instancetype)initWithIOSClass:(IOSClass *)tagClass;
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)tagClass;
 
-- (instancetype)initWithIOSClass:(IOSClass *)tagClass
-                     withBoolean:(jboolean)optional;
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)tagClass
+                               withBoolean:(jboolean)optional;
 
 - (IOSClass *)getTagClass;
 
@@ -37,7 +42,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithBoolean:(jboolean)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithBoolean:(jboolean)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -59,4 +64,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicHandlersTagPattern)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicHandlersTagPattern")

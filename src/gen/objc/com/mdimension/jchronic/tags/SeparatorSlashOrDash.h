@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsSeparatorSlashOrDash
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsSeparatorSlashOrDash_) && (INCLUDE_ALL_ComMdimensionJchronicTagsSeparatorSlashOrDash || defined(INCLUDE_ComMdimensionJchronicTagsSeparatorSlashOrDash))
 #define ComMdimensionJchronicTagsSeparatorSlashOrDash_
 
@@ -28,7 +33,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComMdimensionJchronicTagsSeparator_SeparatorType:(ComMdimensionJchronicTagsSeparator_SeparatorType *)type;
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsSeparator_SeparatorType:(ComMdimensionJchronicTagsSeparator_SeparatorType *)type;
 
 - (ComMdimensionJchronicTagsSeparator_SeparatorType *)getType;
 
@@ -53,4 +58,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsSeparatorSlashOrDash)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsSeparatorSlashOrDash")

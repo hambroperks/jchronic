@@ -22,7 +22,7 @@ JavaUtilRegexPattern *ComMdimensionJchronicTagsOrdinal_ORDINAL_PATTERN;
 
 @implementation ComMdimensionJchronicTagsOrdinal
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type {
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type {
   ComMdimensionJchronicTagsOrdinal_initWithJavaLangInteger_(self, type);
   return self;
 }

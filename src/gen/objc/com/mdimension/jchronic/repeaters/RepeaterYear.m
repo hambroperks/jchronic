@@ -24,7 +24,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterYear, _currentYearStar
 @implementation ComMdimensionJchronicRepeatersRepeaterYear
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterYear_init(self);
   return self;
 }

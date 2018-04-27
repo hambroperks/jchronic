@@ -15,7 +15,7 @@
 
 @implementation ComMdimensionJchronicTagsOrdinalDay
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type {
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type {
   ComMdimensionJchronicTagsOrdinalDay_initWithJavaLangInteger_(self, type);
   return self;
 }

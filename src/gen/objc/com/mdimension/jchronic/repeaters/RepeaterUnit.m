@@ -66,7 +66,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicRepeatersRepeaterUnit)
 @implementation ComMdimensionJchronicRepeatersRepeaterUnit
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterUnit_init(self);
   return self;
 }
@@ -155,7 +155,7 @@ ComMdimensionJchronicRepeatersRepeaterUnit_UnitName *ComMdimensionJchronicRepeat
       @"YEAR", @"SEASON", @"MONTH", @"FORTNIGHT", @"WEEK", @"WEEKEND", @"DAY", @"HOUR", @"MINUTE", @"SECOND",
     };
     for (jint i = 0; i < 10; i++) {
-      (ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicRepeatersRepeaterUnit_UnitName_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicRepeatersRepeaterUnit_UnitName)

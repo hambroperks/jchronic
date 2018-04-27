@@ -19,6 +19,11 @@
 #define INCLUDE_ComMdimensionJchronicNumerizerNumerizer_Prefix 1
 #endif
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicNumerizerNumerizer_) && (INCLUDE_ALL_ComMdimensionJchronicNumerizerNumerizer || defined(INCLUDE_ComMdimensionJchronicNumerizerNumerizer))
 #define ComMdimensionJchronicNumerizerNumerizer_
 
@@ -28,7 +33,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 + (NSString *)anditionWithNSString:(NSString *)str;
 
@@ -79,8 +84,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer)
 
 #pragma mark Public
 
-- (instancetype)initWithNSString:(NSString *)name
-                    withNSString:(NSString *)number;
+- (instancetype __nonnull)initWithNSString:(NSString *)name
+                              withNSString:(NSString *)number;
 
 - (JavaUtilRegexPattern *)getName;
 
@@ -88,7 +93,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer)
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype __nonnull)init NS_UNAVAILABLE;
 
 @end
 
@@ -113,8 +118,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_DirectNum)
 
 #pragma mark Public
 
-- (instancetype)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)name
-                                    withLong:(jlong)number;
+- (instancetype __nonnull)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)name
+                                              withLong:(jlong)number;
 
 - (JavaUtilRegexPattern *)getName;
 
@@ -122,7 +127,7 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_DirectNum)
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype __nonnull)init NS_UNAVAILABLE;
 
 @end
 
@@ -147,13 +152,13 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_Prefix)
 
 #pragma mark Public
 
-- (instancetype)initWithNSString:(NSString *)name
-                        withLong:(jlong)number;
+- (instancetype __nonnull)initWithNSString:(NSString *)name
+                                  withLong:(jlong)number;
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)arg0
-                                    withLong:(jlong)arg1 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)arg0
+                                              withLong:(jlong)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -178,13 +183,13 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_TenPrefix)
 
 #pragma mark Public
 
-- (instancetype)initWithNSString:(NSString *)name
-                        withLong:(jlong)number;
+- (instancetype __nonnull)initWithNSString:(NSString *)name
+                                  withLong:(jlong)number;
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)arg0
-                                    withLong:(jlong)arg1 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)arg0
+                                              withLong:(jlong)arg1 NS_UNAVAILABLE;
 
 @end
 
@@ -200,4 +205,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicNumerizerNumerizer_BigPrefix)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicNumerizerNumerizer")

@@ -24,7 +24,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicTagsSeparatorComma)
 
 @implementation ComMdimensionJchronicTagsSeparatorComma
 
-- (instancetype)initWithComMdimensionJchronicTagsSeparator_SeparatorType:(ComMdimensionJchronicTagsSeparator_SeparatorType *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsSeparator_SeparatorType:(ComMdimensionJchronicTagsSeparator_SeparatorType *)type {
   ComMdimensionJchronicTagsSeparatorComma_initWithComMdimensionJchronicTagsSeparator_SeparatorType_(self, type);
   return self;
 }

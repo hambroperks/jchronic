@@ -14,7 +14,7 @@
 @implementation ComMdimensionJchronicHandlersORSRHandler
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicHandlersORSRHandler_init(self);
   return self;
 }

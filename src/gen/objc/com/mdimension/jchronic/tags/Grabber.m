@@ -38,7 +38,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicTagsGrabber)
 
 @implementation ComMdimensionJchronicTagsGrabber
 
-- (instancetype)initWithComMdimensionJchronicTagsGrabber_Relative:(ComMdimensionJchronicTagsGrabber_Relative *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsGrabber_Relative:(ComMdimensionJchronicTagsGrabber_Relative *)type {
   ComMdimensionJchronicTagsGrabber_initWithComMdimensionJchronicTagsGrabber_Relative_(self, type);
   return self;
 }
@@ -131,7 +131,7 @@ ComMdimensionJchronicTagsGrabber_Relative *ComMdimensionJchronicTagsGrabber_Rela
       @"LAST", @"NEXT", @"THIS",
     };
     for (jint i = 0; i < 3; i++) {
-      (ComMdimensionJchronicTagsGrabber_Relative_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicTagsGrabber_Relative_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicTagsGrabber_Relative_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicTagsGrabber_Relative)

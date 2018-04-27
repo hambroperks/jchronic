@@ -78,7 +78,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicRepeatersRepeaterDayName)
 
 @implementation ComMdimensionJchronicRepeatersRepeaterDayName
 
-- (instancetype)initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName:(ComMdimensionJchronicRepeatersRepeaterDayName_DayName *)type {
+- (instancetype __nonnull)initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName:(ComMdimensionJchronicRepeatersRepeaterDayName_DayName *)type {
   ComMdimensionJchronicRepeatersRepeaterDayName_initWithComMdimensionJchronicRepeatersRepeaterDayName_DayName_(self, type);
   return self;
 }
@@ -206,7 +206,7 @@ ComMdimensionJchronicRepeatersRepeaterDayName_DayName *ComMdimensionJchronicRepe
       @"SUNDAY", @"MONDAY", @"TUESDAY", @"WEDNESDAY", @"THURSDAY", @"FRIDAY", @"SATURDAY",
     };
     for (jint i = 0; i < 7; i++) {
-      (ComMdimensionJchronicRepeatersRepeaterDayName_DayName_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicRepeatersRepeaterDayName_DayName_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicRepeatersRepeaterDayName_DayName_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicRepeatersRepeaterDayName_DayName)

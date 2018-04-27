@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsScalarMonth
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsScalarMonth_) && (INCLUDE_ALL_ComMdimensionJchronicTagsScalarMonth || defined(INCLUDE_ComMdimensionJchronicTagsScalarMonth))
 #define ComMdimensionJchronicTagsScalarMonth_
 
@@ -28,7 +33,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type;
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type;
 
 - (JavaLangInteger *)getType;
 
@@ -54,4 +59,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsScalarMonth)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsScalarMonth")

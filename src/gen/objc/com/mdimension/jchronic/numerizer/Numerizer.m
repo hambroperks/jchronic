@@ -62,7 +62,7 @@ IOSObjectArray *ComMdimensionJchronicNumerizerNumerizer_BIG_PREFIXES;
 @implementation ComMdimensionJchronicNumerizerNumerizer
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicNumerizerNumerizer_init(self);
   return self;
 }
@@ -235,8 +235,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComMdimensionJchronicNumerizerNumerizer)
 
 @implementation ComMdimensionJchronicNumerizerNumerizer_DirectNum
 
-- (instancetype)initWithNSString:(NSString *)name
-                    withNSString:(NSString *)number {
+- (instancetype __nonnull)initWithNSString:(NSString *)name
+                              withNSString:(NSString *)number {
   ComMdimensionJchronicNumerizerNumerizer_DirectNum_initWithNSString_withNSString_(self, name, number);
   return self;
 }
@@ -275,8 +275,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComMdimensionJchronicNumerizerNumerizer_DirectN
 
 @implementation ComMdimensionJchronicNumerizerNumerizer_Prefix
 
-- (instancetype)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)name
-                                    withLong:(jlong)number {
+- (instancetype __nonnull)initWithJavaUtilRegexPattern:(JavaUtilRegexPattern *)name
+                                              withLong:(jlong)number {
   ComMdimensionJchronicNumerizerNumerizer_Prefix_initWithJavaUtilRegexPattern_withLong_(self, name, number);
   return self;
 }
@@ -314,8 +314,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComMdimensionJchronicNumerizerNumerizer_Prefix)
 
 @implementation ComMdimensionJchronicNumerizerNumerizer_TenPrefix
 
-- (instancetype)initWithNSString:(NSString *)name
-                        withLong:(jlong)number {
+- (instancetype __nonnull)initWithNSString:(NSString *)name
+                                  withLong:(jlong)number {
   ComMdimensionJchronicNumerizerNumerizer_TenPrefix_initWithNSString_withLong_(self, name, number);
   return self;
 }
@@ -338,8 +338,8 @@ J2OBJC_CLASS_TYPE_LITERAL_SOURCE(ComMdimensionJchronicNumerizerNumerizer_TenPref
 
 @implementation ComMdimensionJchronicNumerizerNumerizer_BigPrefix
 
-- (instancetype)initWithNSString:(NSString *)name
-                        withLong:(jlong)number {
+- (instancetype __nonnull)initWithNSString:(NSString *)name
+                                  withLong:(jlong)number {
   ComMdimensionJchronicNumerizerNumerizer_BigPrefix_initWithNSString_withLong_(self, name, number);
   return self;
 }

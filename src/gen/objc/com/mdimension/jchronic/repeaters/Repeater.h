@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersRepeater
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersRepeater_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeater || defined(INCLUDE_ComMdimensionJchronicRepeatersRepeater))
 #define ComMdimensionJchronicRepeatersRepeater_
 
@@ -33,7 +38,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithId:(id)type;
+- (instancetype __nonnull)initWithId:(id)type;
 
 - (jint)compareToWithId:(ComMdimensionJchronicRepeatersRepeater *)other;
 
@@ -80,4 +85,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersRepeater)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersRepeater")

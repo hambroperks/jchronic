@@ -35,7 +35,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithId:(id)type;
+- (instancetype __nonnull)initWithId:(id)type;
 
 - (ComMdimensionJchronicUtilsSpan *)getOffsetWithComMdimensionJchronicUtilsSpan:(ComMdimensionJchronicUtilsSpan *)span
                                                                         withInt:(jint)amount

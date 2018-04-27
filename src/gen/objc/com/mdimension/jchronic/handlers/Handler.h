@@ -34,12 +34,12 @@
 
 #pragma mark Public
 
-- (instancetype)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
-                                                  withBoolean:(jboolean)compatible
-         withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns;
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
+                                                            withBoolean:(jboolean)compatible
+                   withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns;
 
-- (instancetype)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
-         withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns;
+- (instancetype __nonnull)initWithComMdimensionJchronicHandlersIHandler:(id<ComMdimensionJchronicHandlersIHandler>)handler
+                   withComMdimensionJchronicHandlersHandlerPatternArray:(IOSObjectArray *)patterns;
 
 + (ComMdimensionJchronicUtilsSpan *)dayOrTimeWithJavaUtilCalendar:(JavaUtilCalendar *)dayStart
                                                  withJavaUtilList:(id<JavaUtilList>)timeTokens
@@ -79,7 +79,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype __nonnull)init NS_UNAVAILABLE;
 
 @end
 

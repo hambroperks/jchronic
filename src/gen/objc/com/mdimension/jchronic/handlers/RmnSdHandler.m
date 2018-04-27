@@ -17,7 +17,7 @@
 @implementation ComMdimensionJchronicHandlersRmnSdHandler
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicHandlersRmnSdHandler_init(self);
   return self;
 }

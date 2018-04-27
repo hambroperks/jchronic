@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion_) && (INCLUDE_ALL_ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion || defined(INCLUDE_ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion))
 #define ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion_
 
@@ -27,7 +32,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type;
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type;
 
 - (JavaLangInteger *)getType;
 
@@ -39,7 +44,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)initWithId:(id)arg0 NS_UNAVAILABLE;
+- (instancetype __nonnull)initWithId:(id)arg0 NS_UNAVAILABLE;
 
 @end
 
@@ -55,4 +60,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicRepeatersIntegerRepeaterDayPorti
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicRepeatersIntegerRepeaterDayPortion")

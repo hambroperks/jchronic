@@ -27,7 +27,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterWeekend, _currentWeekS
 @implementation ComMdimensionJchronicRepeatersRepeaterWeekend
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterWeekend_init(self);
   return self;
 }

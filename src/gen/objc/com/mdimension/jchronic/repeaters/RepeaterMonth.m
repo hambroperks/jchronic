@@ -28,7 +28,7 @@ J2OBJC_STATIC_FIELD_CONSTANT(ComMdimensionJchronicRepeatersRepeaterMonth, MONTH_
 @implementation ComMdimensionJchronicRepeatersRepeaterMonth
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterMonth_init(self);
   return self;
 }

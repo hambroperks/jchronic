@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicChronic
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicChronic_) && (INCLUDE_ALL_ComMdimensionJchronicChronic || defined(INCLUDE_ComMdimensionJchronicChronic))
 #define ComMdimensionJchronicChronic_
 
@@ -119,4 +124,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicChronic)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicChronic")

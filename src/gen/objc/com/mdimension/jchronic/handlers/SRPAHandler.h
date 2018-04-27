@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicHandlersSRPAHandler
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicHandlersSRPAHandler_) && (INCLUDE_ALL_ComMdimensionJchronicHandlersSRPAHandler || defined(INCLUDE_ComMdimensionJchronicHandlersSRPAHandler))
 #define ComMdimensionJchronicHandlersSRPAHandler_
 
@@ -28,7 +33,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 - (ComMdimensionJchronicUtilsSpan *)handleWithJavaUtilList:(id<JavaUtilList>)tokens
                           withComMdimensionJchronicOptions:(ComMdimensionJchronicOptions *)options;
@@ -47,4 +52,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicHandlersSRPAHandler)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicHandlersSRPAHandler")

@@ -11,7 +11,7 @@
 
 @implementation ComMdimensionJchronicTagsStringTag
 
-- (instancetype)initWithNSString:(NSString *)type {
+- (instancetype __nonnull)initWithNSString:(NSString *)type {
   ComMdimensionJchronicTagsStringTag_initWithNSString_(self, type);
   return self;
 }

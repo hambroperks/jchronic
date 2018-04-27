@@ -23,7 +23,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicTagsScalarDay)
 
 @implementation ComMdimensionJchronicTagsScalarDay
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type {
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type {
   ComMdimensionJchronicTagsScalarDay_initWithJavaLangInteger_(self, type);
   return self;
 }

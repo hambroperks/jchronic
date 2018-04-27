@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicUtilsTick
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicUtilsTick_) && (INCLUDE_ALL_ComMdimensionJchronicUtilsTick || defined(INCLUDE_ComMdimensionJchronicUtilsTick))
 #define ComMdimensionJchronicUtilsTick_
 
@@ -20,8 +25,8 @@
 
 #pragma mark Public
 
-- (instancetype)initWithInt:(jint)time
-                withBoolean:(jboolean)ambiguous;
+- (instancetype __nonnull)initWithInt:(jint)time
+                          withBoolean:(jboolean)ambiguous;
 
 - (jfloat)floatValue;
 
@@ -37,7 +42,7 @@
 
 // Disallowed inherited constructors, do not use.
 
-- (instancetype)init NS_UNAVAILABLE;
+- (instancetype __nonnull)init NS_UNAVAILABLE;
 
 @end
 
@@ -53,4 +58,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicUtilsTick)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicUtilsTick")

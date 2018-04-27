@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicTagsOrdinalDay
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicTagsOrdinalDay_) && (INCLUDE_ALL_ComMdimensionJchronicTagsOrdinalDay || defined(INCLUDE_ComMdimensionJchronicTagsOrdinalDay))
 #define ComMdimensionJchronicTagsOrdinalDay_
 
@@ -27,7 +32,7 @@
 
 #pragma mark Public
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type;
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type;
 
 - (JavaLangInteger *)getType;
 
@@ -51,4 +56,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicTagsOrdinalDay)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicTagsOrdinalDay")

@@ -24,7 +24,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicRepeatersRepeaterHour, _currentDayStart
 @implementation ComMdimensionJchronicRepeatersRepeaterHour
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicRepeatersRepeaterHour_init(self);
   return self;
 }

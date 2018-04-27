@@ -26,7 +26,7 @@
 
 @implementation ComMdimensionJchronicRepeatersRepeater
 
-- (instancetype)initWithId:(id)type {
+- (instancetype __nonnull)initWithId:(id)type {
   ComMdimensionJchronicRepeatersRepeater_initWithId_(self, type);
   return self;
 }

@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicUtilsSpan
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicUtilsSpan_) && (INCLUDE_ALL_ComMdimensionJchronicUtilsSpan || defined(INCLUDE_ComMdimensionJchronicUtilsSpan))
 #define ComMdimensionJchronicUtilsSpan_
 
@@ -31,15 +36,15 @@
 
 #pragma mark Public
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
-                    withJavaUtilCalendar:(JavaUtilCalendar *)end;
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
+                              withJavaUtilCalendar:(JavaUtilCalendar *)end;
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
-                                 withInt:(jint)field
-                                withLong:(jlong)amount;
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)begin
+                                           withInt:(jint)field
+                                          withLong:(jlong)amount;
 
-- (instancetype)initWithLong:(jlong)begin
-                    withLong:(jlong)end;
+- (instancetype __nonnull)initWithLong:(jlong)begin
+                              withLong:(jlong)end;
 
 /*!
  @brief Add a number of seconds to this span, returning the 
@@ -85,4 +90,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicUtilsSpan)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicUtilsSpan")

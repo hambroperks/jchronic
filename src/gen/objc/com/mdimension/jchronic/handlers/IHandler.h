@@ -13,6 +13,11 @@
 #endif
 #undef RESTRICT_ComMdimensionJchronicHandlersIHandler
 
+#if __has_feature(nullability)
+#pragma clang diagnostic push
+#pragma GCC diagnostic ignored "-Wnullability-completeness"
+#endif
+
 #if !defined (ComMdimensionJchronicHandlersIHandler_) && (INCLUDE_ALL_ComMdimensionJchronicHandlersIHandler || defined(INCLUDE_ComMdimensionJchronicHandlersIHandler))
 #define ComMdimensionJchronicHandlersIHandler_
 
@@ -33,4 +38,8 @@ J2OBJC_TYPE_LITERAL_HEADER(ComMdimensionJchronicHandlersIHandler)
 
 #endif
 
+
+#if __has_feature(nullability)
+#pragma clang diagnostic pop
+#endif
 #pragma pop_macro("INCLUDE_ALL_ComMdimensionJchronicHandlersIHandler")

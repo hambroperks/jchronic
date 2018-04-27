@@ -23,7 +23,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicTagsScalarMonth)
 
 @implementation ComMdimensionJchronicTagsScalarMonth
 
-- (instancetype)initWithJavaLangInteger:(JavaLangInteger *)type {
+- (instancetype __nonnull)initWithJavaLangInteger:(JavaLangInteger *)type {
   ComMdimensionJchronicTagsScalarMonth_initWithJavaLangInteger_(self, type);
   return self;
 }

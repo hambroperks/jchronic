@@ -22,7 +22,7 @@
 @implementation ComMdimensionJchronicHandlersRmnSyHandler
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicHandlersRmnSyHandler_init(self);
   return self;
 }

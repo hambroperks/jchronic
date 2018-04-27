@@ -26,42 +26,42 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicOptions, _now_, JavaUtilCalendar *)
 @implementation ComMdimensionJchronicOptions
 
 J2OBJC_IGNORE_DESIGNATED_BEGIN
-- (instancetype)init {
+- (instancetype __nonnull)init {
   ComMdimensionJchronicOptions_init(self);
   return self;
 }
 J2OBJC_IGNORE_DESIGNATED_END
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)now {
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)now {
   ComMdimensionJchronicOptions_initWithJavaUtilCalendar_(self, now);
   return self;
 }
 
-- (instancetype)initWithJavaUtilCalendar:(JavaUtilCalendar *)now
-                             withBoolean:(jboolean)guess {
+- (instancetype __nonnull)initWithJavaUtilCalendar:(JavaUtilCalendar *)now
+                                       withBoolean:(jboolean)guess {
   ComMdimensionJchronicOptions_initWithJavaUtilCalendar_withBoolean_(self, now, guess);
   return self;
 }
 
-- (instancetype)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context {
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context {
   ComMdimensionJchronicOptions_initWithComMdimensionJchronicTagsPointer_PointerType_(self, context);
   return self;
 }
 
-- (instancetype)initWithBoolean:(jboolean)guess {
+- (instancetype __nonnull)initWithBoolean:(jboolean)guess {
   ComMdimensionJchronicOptions_initWithBoolean_(self, guess);
   return self;
 }
 
-- (instancetype)initWithInt:(jint)ambiguousTimeRange {
+- (instancetype __nonnull)initWithInt:(jint)ambiguousTimeRange {
   ComMdimensionJchronicOptions_initWithInt_(self, ambiguousTimeRange);
   return self;
 }
 
-- (instancetype)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context
-                                                withJavaUtilCalendar:(JavaUtilCalendar *)now
-                                                         withBoolean:(jboolean)guess
-                                                             withInt:(jint)ambiguousTimeRange {
+- (instancetype __nonnull)initWithComMdimensionJchronicTagsPointer_PointerType:(ComMdimensionJchronicTagsPointer_PointerType *)context
+                                                          withJavaUtilCalendar:(JavaUtilCalendar *)now
+                                                                   withBoolean:(jboolean)guess
+                                                                       withInt:(jint)ambiguousTimeRange {
   ComMdimensionJchronicOptions_initWithComMdimensionJchronicTagsPointer_PointerType_withJavaUtilCalendar_withBoolean_withInt_(self, context, now, guess, ambiguousTimeRange);
   return self;
 }

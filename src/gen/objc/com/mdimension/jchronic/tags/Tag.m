@@ -20,7 +20,7 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicTagsTag, _now_, JavaUtilCalendar *)
 
 @implementation ComMdimensionJchronicTagsTag
 
-- (instancetype)initWithId:(id)type {
+- (instancetype __nonnull)initWithId:(id)type {
   ComMdimensionJchronicTagsTag_initWithId_(self, type);
   return self;
 }

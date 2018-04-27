@@ -31,7 +31,7 @@
 
 #pragma mark Public
 
-- (instancetype)init;
+- (instancetype __nonnull)init;
 
 + (ComMdimensionJchronicRepeatersRepeaterUnit *)scanWithComMdimensionJchronicUtilsToken:(ComMdimensionJchronicUtilsToken *)token;
 

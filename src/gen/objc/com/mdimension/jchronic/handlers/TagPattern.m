@@ -19,13 +19,13 @@ J2OBJC_FIELD_SETTER(ComMdimensionJchronicHandlersTagPattern, _tagClass_, IOSClas
 
 @implementation ComMdimensionJchronicHandlersTagPattern
 
-- (instancetype)initWithIOSClass:(IOSClass *)tagClass {
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)tagClass {
   ComMdimensionJchronicHandlersTagPattern_initWithIOSClass_(self, tagClass);
   return self;
 }
 
-- (instancetype)initWithIOSClass:(IOSClass *)tagClass
-                     withBoolean:(jboolean)optional {
+- (instancetype __nonnull)initWithIOSClass:(IOSClass *)tagClass
+                               withBoolean:(jboolean)optional {
   ComMdimensionJchronicHandlersTagPattern_initWithIOSClass_withBoolean_(self, tagClass, optional);
   return self;
 }

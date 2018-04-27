@@ -72,7 +72,7 @@ J2OBJC_INITIALIZED_DEFN(ComMdimensionJchronicRepeatersRepeaterDayPortion)
 
 @implementation ComMdimensionJchronicRepeatersRepeaterDayPortion
 
-- (instancetype)initWithId:(id)type {
+- (instancetype __nonnull)initWithId:(id)type {
   ComMdimensionJchronicRepeatersRepeaterDayPortion_initWithId_(self, type);
   return self;
 }
@@ -237,7 +237,7 @@ ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion *ComMdimensionJchron
       @"AM", @"PM", @"MORNING", @"AFTERNOON", @"EVENING", @"NIGHT",
     };
     for (jint i = 0; i < 6; i++) {
-      (ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_values_[i] = e = objc_constructInstance(self, (void *)ptr), ptr += objSize);
+      ((void)(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_values_[i] = e = objc_constructInstance(self, (void *)ptr)), ptr += objSize);
       ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion_initWithNSString_withInt_(e, names[i], i);
     }
     J2OBJC_SET_INITIALIZED(ComMdimensionJchronicRepeatersRepeaterDayPortion_DayPortion)
