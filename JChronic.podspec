@@ -9,15 +9,15 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '7.0'
   s.requires_arc = false
 
-  s.preserve_paths = 'src/gen/objc/org'
+  s.preserve_paths = 'src/main/gen/objc/org'
   s.subspec 'org' do |o|
     o.preserve_paths = 'com/mdimension/jchronic'
     o.subspec 'mdimension' do |j|
-      j.preserve_paths = 'src/gen/objc/com/mdimension/jchronic'
+      j.preserve_paths = 'src/main/gen/objc/com/mdimension/jchronic'
       j.subspec 'jchronic' do |c|
-        c.source_files = 'src/gen/objc/**/*.{h,m}'
-        c.public_header_files = 'src/gen/objc/**/*.h'
-        c.header_mappings_dir = 'src/gen/objc'
+        c.source_files = 'src/main/gen/objc/**/*.{h,m}'
+        c.public_header_files = 'src/main/gen/objc/**/*.h'
+        c.header_mappings_dir = 'src/main/gen/objc'
       end
     end
   end

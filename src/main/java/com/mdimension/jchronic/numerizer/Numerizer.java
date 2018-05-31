@@ -118,12 +118,12 @@ public class Numerizer {
     String numerizedStr = str;
     
     // preprocess
-    numerizedStr = Numerizer.DEHYPHENATOR.matcher(numerizedStr).replaceAll("$1 $2"); // will mutilate hyphenated-words but shouldn't matter for date extraction
-    numerizedStr = Numerizer.DEHALFER.matcher(numerizedStr).replaceAll("haAlf"); // take the 'a' out so it doesn't turn into a 1, save the half for the end
+    numerizedStr = Numerizer.DEHYPHENATOR.matcher(numerizedStr).replaceAll("$1 $2").replaceAll("null", ""); // will mutilate hyphenated-words but shouldn't matter for date extraction
+    numerizedStr = Numerizer.DEHALFER.matcher(numerizedStr).replaceAll("haAlf").replaceAll("null", ""); // take the 'a' out so it doesn't turn into a 1, save the half for the end
     
     // easy/direct replacements
     for (DirectNum dn : Numerizer.DIRECT_NUMS) {
-      numerizedStr = dn.getName().matcher(numerizedStr).replaceAll(dn.getNumber());
+      numerizedStr = dn.getName().matcher(numerizedStr).replaceAll(dn.getNumber()).replaceAll("null", "");
     }
     
     // ten, twenty, etc.

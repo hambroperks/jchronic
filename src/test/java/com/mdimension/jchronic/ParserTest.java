@@ -645,6 +645,7 @@ public class ParserTest extends TestCase {
   public Span parse_now(String string, Options options) {
     options.setNow(TIME_2006_08_16_14_00_00);
     options.setCompatibilityMode(true);
+    options.setDebug(true);
     return Chronic.parse(string, options);
   }
 }
